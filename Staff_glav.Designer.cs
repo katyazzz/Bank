@@ -323,6 +323,7 @@
             this.history_credit.TabIndex = 20;
             this.history_credit.Text = "показать историю погашения";
             this.history_credit.UseVisualStyleBackColor = true;
+            this.history_credit.Click += new System.EventHandler(this.history_credit_Click);
             // 
             // ShowCredit
             // 
@@ -348,6 +349,7 @@
             // 
             // history_dep
             // 
+            this.history_dep.BackColor = System.Drawing.SystemColors.Info;
             this.history_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.history_dep.Location = new System.Drawing.Point(365, 358);
             this.history_dep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -355,7 +357,7 @@
             this.history_dep.Size = new System.Drawing.Size(317, 31);
             this.history_dep.TabIndex = 22;
             this.history_dep.Text = "показать историю выплат";
-            this.history_dep.UseVisualStyleBackColor = true;
+            this.history_dep.UseVisualStyleBackColor = false;
             this.history_dep.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13

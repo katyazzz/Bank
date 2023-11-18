@@ -156,5 +156,27 @@ namespace Bank
         {
 
         }
+
+        private void history_credit_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtspas.Text, out int pasSeries) && int.TryParse(txtnpas.Text, out int pasNumber))
+            {
+                // Преобразование прошло успешно, теперь pasSeries и pasNumber содержат значения
+
+                // Создайте новую форму CreditPaymentsHistoryForm
+                CreditPaymentsHistoryForm creditPaymentsHistoryForm = new CreditPaymentsHistoryForm();
+
+                // Загрузите историю платежей по кредиту в новую форму
+                creditPaymentsHistoryForm.LoadCreditPaymentsHistory(pasSeries, pasNumber, db);
+
+                // Покажите новую форму
+                creditPaymentsHistoryForm.Show();
+            }
+            else
+            {
+                // Возникла ошибка при преобразовании, обработайте эту ситуацию
+                MessageBox.Show("Некорректный формат серии или номера паспорта. Пожалуйста, введите числовые значения.");
+            }
+        }
     }
 }

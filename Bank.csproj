@@ -75,6 +75,12 @@
     <Compile Include="CreateKlient.Designer.cs">
       <DependentUpon>CreateKlient.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreditPaymentsHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreditPaymentsHistoryForm.Designer.cs">
+      <DependentUpon>CreditPaymentsHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="db.cs" />
     <Compile Include="DepositPaymentsHistoryForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="CreateKlient.resx">
       <DependentUpon>CreateKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreditPaymentsHistoryForm.resx">
+      <DependentUpon>CreditPaymentsHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepositPaymentsHistoryForm.resx">
       <DependentUpon>DepositPaymentsHistoryForm.cs</DependentUpon>
