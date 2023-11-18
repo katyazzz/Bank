@@ -103,7 +103,18 @@ namespace Bank
 
         private void button11_Click(object sender, EventArgs e)
         {
+            // Получите серию и номер паспорта из вашего кода (предположим, что у вас есть переменные pasSeries и pasNumber)
+           int pasSeries = Convert.ToInt32(txtspas.Text);
+            int pasNumber = Convert.ToInt32(txtnpas.Text);
 
+            // Создайте новую форму HisOfOperations
+            HisOfOperations hisOfOperationsForm = new HisOfOperations();
+
+            // Загрузите историю по счету в новую форму
+            hisOfOperationsForm.LoadAccountHistory(pasSeries, pasNumber, db);
+
+            // Покажите новую форму
+            hisOfOperationsForm.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
