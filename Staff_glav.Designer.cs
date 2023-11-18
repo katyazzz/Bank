@@ -335,6 +335,7 @@
             // 
             // history_trans
             // 
+            this.history_trans.BackColor = System.Drawing.SystemColors.Info;
             this.history_trans.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.history_trans.Location = new System.Drawing.Point(349, 198);
             this.history_trans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -342,7 +343,7 @@
             this.history_trans.Size = new System.Drawing.Size(288, 32);
             this.history_trans.TabIndex = 21;
             this.history_trans.Text = "показать историю по счету";
-            this.history_trans.UseVisualStyleBackColor = true;
+            this.history_trans.UseVisualStyleBackColor = false;
             this.history_trans.Click += new System.EventHandler(this.button11_Click);
             // 
             // history_dep

@@ -128,8 +128,28 @@ namespace Bank
         }
 
         private void button12_Click(object sender, EventArgs e)
+
         {
 
+          
+            if (int.TryParse(txtspas.Text, out int pasSeries) && int.TryParse(txtnpas.Text, out int pasNumber))
+            {
+                // Преобразование прошло успешно, теперь pasSeries и pasNumber содержат значения
+
+                // Создайте новую форму DepositPaymentsHistoryForm
+                DepositPaymentsHistoryForm depositPaymentsHistoryForm = new DepositPaymentsHistoryForm();
+
+                // Загрузите историю выплат по вкладам в новую форму
+                depositPaymentsHistoryForm.LoadDepositPaymentsHistory(pasSeries, pasNumber, db);
+
+                // Покажите новую форму
+                depositPaymentsHistoryForm.Show();
+            }
+            else
+            {
+                // Возникла ошибка при преобразовании, обработайте эту ситуацию
+                MessageBox.Show("Некорректный формат серии или номера паспорта. Пожалуйста, введите числовые значения.");
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
