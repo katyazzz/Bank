@@ -178,5 +178,32 @@ namespace Bank
                 MessageBox.Show("Некорректный формат серии или номера паспорта. Пожалуйста, введите числовые значения.");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int pasSeries = Convert.ToInt32(txtspas.Text);
+            int pasNumber = Convert.ToInt32(txtnpas.Text);
+
+            // Подтверждение перед открытием нового счета
+            DialogResult result = MessageBox.Show("Вы уверены, что хотите открыть новый счет?", "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Используйте DatabaseHelper для создания нового счета
+                int newAccountNumber = db.CreateNewAccount(pasSeries, pasNumber);
+
+                if (newAccountNumber != -1)
+                {
+                    // При необходимости выполните какие-то дополнительные действия после создания счета
+                    // Например, обновите интерфейс, отобразите новый номер счета и т. д.
+                    MessageBox.Show($"Новый счет успешно создан. Номер счета: {newAccountNumber}");
+                }
+                else
+                {
+                    MessageBox.Show("Не удалось создать новый счет.");
+                }
+            }
+            // В противном случае (если result == DialogResult.No), ничего не делаем
+        }
     }
 }

@@ -84,28 +84,13 @@ namespace Bank
             }
 
 
-            try
-            {
-                ///int ID_Staff = GetCurrentStaffID(login, password, db);
-                if (ID_Staff != -1)
-                {
-                    Staff_glav staffGlavForm = new Staff_glav(ID_Staff, db);
-
-                    ///LoadStaffInfo(staffGlavForm);
-                    staffGlavForm.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Неверный логин или пароль");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Произошла ошибка: {ex.Message}");
-            }
+           
 
         }
 
+        private void EntStaf_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

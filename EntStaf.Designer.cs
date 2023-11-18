@@ -41,7 +41,7 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPassword.Location = new System.Drawing.Point(320, 192);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(306, 40);
+            this.textBoxPassword.Size = new System.Drawing.Size(306, 34);
             this.textBoxPassword.TabIndex = 11;
             // 
             // textBoxLogin
@@ -49,7 +49,7 @@
             this.textBoxLogin.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLogin.Location = new System.Drawing.Point(320, 143);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(306, 40);
+            this.textBoxLogin.Size = new System.Drawing.Size(306, 34);
             this.textBoxLogin.TabIndex = 10;
             this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             // 
@@ -70,7 +70,7 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(173, 201);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 28);
+            this.label3.Size = new System.Drawing.Size(98, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Пароль:";
             // 
@@ -80,7 +80,7 @@
             this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(173, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 28);
+            this.label2.Size = new System.Drawing.Size(85, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "Логин:";
             // 
@@ -90,7 +90,7 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(58, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(705, 57);
+            this.label1.Size = new System.Drawing.Size(569, 46);
             this.label1.TabIndex = 6;
             this.label1.Text = "Авторизация сотрудника";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -108,6 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EntStaf";
             this.Text = "EntStaf";
+            this.Load += new System.EventHandler(this.EntStaf_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

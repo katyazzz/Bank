@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -85,7 +86,6 @@ namespace Bank
         }
 
 
-
         public (int, string, string) GetStaffInfoByID(int ID_Staff)
         {
             int ID = -1;
@@ -116,6 +116,47 @@ namespace Bank
 
             return (ID, fullName, position);
         }
+
+
+        public int CreateNewAccount(int pasSeries, int pasNumber)
+        {
+            int newAccountNumber = -1;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand createAccountCommand = new SqlCommand("CreateNewAccount", connection))
+                {
+                    createAccountCommand.CommandType = CommandType.StoredProcedure;
+
+                    // Добавляем параметр для серии паспорта
+                    SqlParameter pasSeriesParameter = createAccountCommand.Parameters.Add("@PasSeries", SqlDbType.Int);
+                    pasSeriesParameter.Value = pasSeries;
+
+                    // Добавляем параметр для номера паспорта
+                    SqlParameter pasNumberParameter = createAccountCommand.Parameters.Add("@PasNumber", SqlDbType.Int);
+                    pasNumberParameter.Value = pasNumber;
+
+                    // Добавляем параметр для получения результата (AccountNumber)
+                    SqlParameter accountNumberParameter = createAccountCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
+                    accountNumberParameter.Direction = ParameterDirection.Output;
+
+                    // Выполняем хранимую процедуру
+                    createAccountCommand.ExecuteNonQuery();
+
+                    // Получаем значение выходного параметра
+                    if (accountNumberParameter.Value != DBNull.Value)
+                    {
+                        newAccountNumber = (int)accountNumberParameter.Value;
+                    }
+                }
+            }
+
+            return newAccountNumber;
+        }
+
+
 
 
 
