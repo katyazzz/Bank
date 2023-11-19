@@ -82,6 +82,12 @@
       <DependentUpon>CreditPaymentsHistoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="db.cs" />
+    <Compile Include="DebFromAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebFromAccountForm.Designer.cs">
+      <DependentUpon>DebFromAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepositPaymentsHistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreditPaymentsHistoryForm.resx">
       <DependentUpon>CreditPaymentsHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebFromAccountForm.resx">
+      <DependentUpon>DebFromAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepositPaymentsHistoryForm.resx">
       <DependentUpon>DepositPaymentsHistoryForm.cs</DependentUpon>

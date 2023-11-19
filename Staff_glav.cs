@@ -120,6 +120,25 @@ namespace Bank
         private void button7_Click(object sender, EventArgs e)
         {
 
+            int pasSeries = Convert.ToInt32(txtspas.Text);
+            int pasNumber = Convert.ToInt32(txtnpas.Text);
+            // Проверка наличия выбранного счета в DataGridView
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                int selTransactNumber = -1;
+                // Получение номера выбранного счета
+                int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["AccountNumber"].Value;
+
+                // Создание новой формы для пополнения счета
+                DebFromAccountForm DebFromAccountForm = new DebFromAccountForm(selTransactNumber, selectedAccountNumber, db);
+
+                // Показ формы для пополнения счета
+                DebFromAccountForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для списания баланса.");
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
