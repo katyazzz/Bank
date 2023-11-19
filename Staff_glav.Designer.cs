@@ -225,6 +225,7 @@
             // 
             // new_dep
             // 
+            this.new_dep.BackColor = System.Drawing.SystemColors.Info;
             this.new_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.new_dep.Location = new System.Drawing.Point(115, 358);
             this.new_dep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -232,7 +233,7 @@
             this.new_dep.Size = new System.Drawing.Size(229, 31);
             this.new_dep.TabIndex = 14;
             this.new_dep.Text = "открыть новый вклад";
-            this.new_dep.UseVisualStyleBackColor = true;
+            this.new_dep.UseVisualStyleBackColor = false;
             this.new_dep.Click += new System.EventHandler(this.new_dep_Click);
             // 
             // new_credit
