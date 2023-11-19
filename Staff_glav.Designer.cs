@@ -190,6 +190,7 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(115, 197);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -197,7 +198,7 @@
             this.button3.Size = new System.Drawing.Size(229, 33);
             this.button3.TabIndex = 11;
             this.button3.Text = "открыть новый счет";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridDep
