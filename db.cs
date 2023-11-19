@@ -156,8 +156,42 @@ namespace Bank
             return newAccountNumber;
         }
 
+        public void DepositMoney(int transactNumber, int accountNumber, float amount, int ID_Staff)
 
+        {
+            
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+           
+
+                using (SqlCommand depositMoneyCommand = new SqlCommand("DepositMoney", connection))
+                {
+                    depositMoneyCommand.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter transactNumberParameter = depositMoneyCommand.Parameters.Add("@TransactNumber", SqlDbType.Int);
+                    transactNumberParameter.Value = transactNumber;
+
+                    // Добавляем параметр для номера счета
+                    SqlParameter accountNumberParameter = depositMoneyCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
+                    accountNumberParameter.Value = accountNumber;
+
+                    // Добавляем параметр для суммы пополнения
+                    SqlParameter amountParameter = depositMoneyCommand.Parameters.Add("@Amount", SqlDbType.Float);
+                    amountParameter.Value = amount;
+
+                    // Добавляем параметр для ID сотрудника
+                    SqlParameter idStaffParameter = depositMoneyCommand.Parameters.Add("@ID_Staff", SqlDbType.Int);
+                    idStaffParameter.Value = ID_Staff;
+
+                    // Выполняем хранимую процедуру
+                    depositMoneyCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+   
 
 
 

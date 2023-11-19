@@ -246,6 +246,7 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.SystemColors.Info;
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(939, 228);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -253,7 +254,8 @@
             this.button6.Size = new System.Drawing.Size(145, 33);
             this.button6.TabIndex = 16;
             this.button6.Text = "пополнение";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -387,7 +389,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(116, 138);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(379, 23);
             this.textBox1.TabIndex = 25;
@@ -407,15 +409,16 @@
             // sotr_tb
             // 
             this.sotr_tb.Location = new System.Drawing.Point(1287, 16);
-            this.sotr_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sotr_tb.Margin = new System.Windows.Forms.Padding(4);
             this.sotr_tb.Name = "sotr_tb";
             this.sotr_tb.Size = new System.Drawing.Size(245, 22);
             this.sotr_tb.TabIndex = 27;
+            this.sotr_tb.TextChanged += new System.EventHandler(this.sotr_tb_TextChanged);
             // 
             // post_tb
             // 
             this.post_tb.Location = new System.Drawing.Point(1287, 52);
-            this.post_tb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.post_tb.Margin = new System.Windows.Forms.Padding(4);
             this.post_tb.Name = "post_tb";
             this.post_tb.Size = new System.Drawing.Size(245, 22);
             this.post_tb.TabIndex = 28;
