@@ -224,7 +224,36 @@ namespace Bank
             }
         }
 
+        public int OpenNewDeposit(int pasSeries, int pasNumber, float summa, int depositCode, int idStaff)
+        {
+            int newDepositID = -1;
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("OpenNewDeposit", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@PasSeries", pasSeries);
+                    command.Parameters.AddWithValue("@PasNumber", pasNumber);
+                    command.Parameters.AddWithValue("@Summa", summa);
+                    command.Parameters.AddWithValue("@DepositCode", depositCode);
+                    command.Parameters.AddWithValue("@ID_Staff", idStaff);
+
+                    SqlParameter newDepositIDParameter = new SqlParameter("@NewID_Deposit", SqlDbType.Int);
+                    newDepositIDParameter.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(newDepositIDParameter);
+
+                    command.ExecuteNonQuery();
+
+                    newDepositID = (int)newDepositIDParameter.Value;
+                }
+            }
+
+            return newDepositID;
+        }
 
 
     }

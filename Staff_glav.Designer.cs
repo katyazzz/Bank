@@ -233,6 +233,7 @@
             this.new_dep.TabIndex = 14;
             this.new_dep.Text = "открыть новый вклад";
             this.new_dep.UseVisualStyleBackColor = true;
+            this.new_dep.Click += new System.EventHandler(this.new_dep_Click);
             // 
             // new_credit
             // 
