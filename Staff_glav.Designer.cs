@@ -259,6 +259,7 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.SystemColors.Info;
             this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.Location = new System.Drawing.Point(939, 266);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -266,7 +267,7 @@
             this.button7.Size = new System.Drawing.Size(145, 33);
             this.button7.TabIndex = 17;
             this.button7.Text = "снятие";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
@@ -401,7 +402,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(1163, 18);
+            this.label7.Location = new System.Drawing.Point(1120, 31);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 17);
@@ -412,20 +413,20 @@
             // sotr_tb
             // 
             this.sotr_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sotr_tb.Location = new System.Drawing.Point(1275, 16);
+            this.sotr_tb.Location = new System.Drawing.Point(1235, 16);
             this.sotr_tb.Margin = new System.Windows.Forms.Padding(4);
             this.sotr_tb.Name = "sotr_tb";
-            this.sotr_tb.Size = new System.Drawing.Size(245, 26);
+            this.sotr_tb.Size = new System.Drawing.Size(285, 26);
             this.sotr_tb.TabIndex = 27;
             this.sotr_tb.TextChanged += new System.EventHandler(this.sotr_tb_TextChanged);
             // 
             // post_tb
             // 
             this.post_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.post_tb.Location = new System.Drawing.Point(1275, 51);
+            this.post_tb.Location = new System.Drawing.Point(1235, 51);
             this.post_tb.Margin = new System.Windows.Forms.Padding(4);
             this.post_tb.Name = "post_tb";
-            this.post_tb.Size = new System.Drawing.Size(245, 26);
+            this.post_tb.Size = new System.Drawing.Size(285, 26);
             this.post_tb.TabIndex = 28;
             // 
             // Staff_glav

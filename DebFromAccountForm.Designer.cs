@@ -35,13 +35,14 @@
             // 
             // btnDebFromAccount
             // 
+            this.btnDebFromAccount.BackColor = System.Drawing.Color.Lime;
             this.btnDebFromAccount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDebFromAccount.Location = new System.Drawing.Point(96, 148);
             this.btnDebFromAccount.Name = "btnDebFromAccount";
             this.btnDebFromAccount.Size = new System.Drawing.Size(162, 32);
             this.btnDebFromAccount.TabIndex = 0;
             this.btnDebFromAccount.Text = "подтвердить";
-            this.btnDebFromAccount.UseVisualStyleBackColor = true;
+            this.btnDebFromAccount.UseVisualStyleBackColor = false;
             this.btnDebFromAccount.Click += new System.EventHandler(this.btnDebFromAccount_Click_1);
             // 
             // label1
@@ -66,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 225);
+            this.ClientSize = new System.Drawing.Size(444, 253);
             this.Controls.Add(this.txtAmountDeb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDebFromAccount);
