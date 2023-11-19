@@ -139,17 +139,17 @@ namespace Bank
                     pasNumberParameter.Value = pasNumber;
 
                     // Добавляем параметр для получения результата (AccountNumber)
-                    SqlParameter accountNumberParameter = createAccountCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
-                    accountNumberParameter.Direction = ParameterDirection.Output;
+                   // SqlParameter accountNumberParameter = createAccountCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
+                   // accountNumberParameter.Direction = ParameterDirection.Output;
 
                     // Выполняем хранимую процедуру
                     createAccountCommand.ExecuteNonQuery();
 
                     // Получаем значение выходного параметра
-                    if (accountNumberParameter.Value != DBNull.Value)
-                    {
-                        newAccountNumber = (int)accountNumberParameter.Value;
-                    }
+                   // if (accountNumberParameter.Value != DBNull.Value)
+                   // {
+                  //      newAccountNumber = (int)accountNumberParameter.Value;
+                   // }
                 }
             }
 
