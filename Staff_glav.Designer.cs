@@ -70,7 +70,7 @@
             // txtspas
             // 
             this.txtspas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtspas.Location = new System.Drawing.Point(32, 48);
+            this.txtspas.Location = new System.Drawing.Point(31, 48);
             this.txtspas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtspas.Name = "txtspas";
             this.txtspas.Size = new System.Drawing.Size(153, 24);
@@ -92,7 +92,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(723, 33);
+            this.button1.Location = new System.Drawing.Point(659, 31);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 42);
@@ -105,7 +105,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(473, 33);
+            this.button2.Location = new System.Drawing.Point(409, 31);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 43);
@@ -117,7 +117,7 @@
             // txtnpas
             // 
             this.txtnpas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtnpas.Location = new System.Drawing.Point(224, 48);
+            this.txtnpas.Location = new System.Drawing.Point(198, 50);
             this.txtnpas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnpas.Name = "txtnpas";
             this.txtnpas.Size = new System.Drawing.Size(153, 24);
@@ -128,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(220, 25);
+            this.label2.Location = new System.Drawing.Point(195, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 17);
             this.label2.TabIndex = 5;
@@ -366,13 +366,14 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(939, 33);
+            this.button13.Location = new System.Drawing.Point(875, 31);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(205, 42);
             this.button13.TabIndex = 23;
             this.button13.Text = "создать сотрудника";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label6
             // 
@@ -398,29 +399,33 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1201, 16);
+            this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(1163, 18);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(94, 17);
             this.label7.TabIndex = 26;
             this.label7.Text = "Сотрудник";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // sotr_tb
             // 
-            this.sotr_tb.Location = new System.Drawing.Point(1287, 16);
+            this.sotr_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sotr_tb.Location = new System.Drawing.Point(1275, 16);
             this.sotr_tb.Margin = new System.Windows.Forms.Padding(4);
             this.sotr_tb.Name = "sotr_tb";
-            this.sotr_tb.Size = new System.Drawing.Size(245, 22);
+            this.sotr_tb.Size = new System.Drawing.Size(245, 26);
             this.sotr_tb.TabIndex = 27;
             this.sotr_tb.TextChanged += new System.EventHandler(this.sotr_tb_TextChanged);
             // 
             // post_tb
             // 
-            this.post_tb.Location = new System.Drawing.Point(1287, 52);
+            this.post_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.post_tb.Location = new System.Drawing.Point(1275, 51);
             this.post_tb.Margin = new System.Windows.Forms.Padding(4);
             this.post_tb.Name = "post_tb";
-            this.post_tb.Size = new System.Drawing.Size(245, 22);
+            this.post_tb.Size = new System.Drawing.Size(245, 26);
             this.post_tb.TabIndex = 28;
             // 
             // Staff_glav
