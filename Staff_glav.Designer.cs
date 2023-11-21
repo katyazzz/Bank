@@ -243,6 +243,7 @@
             // 
             // new_credit
             // 
+            this.new_credit.BackColor = System.Drawing.SystemColors.Info;
             this.new_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.new_credit.Location = new System.Drawing.Point(86, 408);
             this.new_credit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -250,7 +251,7 @@
             this.new_credit.Size = new System.Drawing.Size(172, 25);
             this.new_credit.TabIndex = 15;
             this.new_credit.Text = "открыть новый кредит";
-            this.new_credit.UseVisualStyleBackColor = true;
+            this.new_credit.UseVisualStyleBackColor = false;
             this.new_credit.Click += new System.EventHandler(this.new_credit_Click);
             // 
             // button6

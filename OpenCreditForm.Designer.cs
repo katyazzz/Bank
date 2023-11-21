@@ -53,6 +53,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(55, 183);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -60,7 +61,7 @@
             this.button1.Size = new System.Drawing.Size(141, 29);
             this.button1.TabIndex = 5;
             this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
