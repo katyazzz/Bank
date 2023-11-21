@@ -38,24 +38,27 @@
             // txtDepositCode
             // 
             this.txtDepositCode.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtDepositCode.Location = new System.Drawing.Point(69, 85);
+            this.txtDepositCode.Location = new System.Drawing.Point(52, 69);
+            this.txtDepositCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDepositCode.Name = "txtDepositCode";
-            this.txtDepositCode.Size = new System.Drawing.Size(188, 23);
+            this.txtDepositCode.Size = new System.Drawing.Size(142, 23);
             this.txtDepositCode.TabIndex = 0;
             // 
             // txtSumma
             // 
             this.txtSumma.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtSumma.Location = new System.Drawing.Point(69, 154);
+            this.txtSumma.Location = new System.Drawing.Point(52, 125);
+            this.txtSumma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSumma.Name = "txtSumma";
-            this.txtSumma.Size = new System.Drawing.Size(188, 23);
+            this.txtSumma.Size = new System.Drawing.Size(142, 23);
             this.txtSumma.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(69, 63);
+            this.label1.Location = new System.Drawing.Point(52, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 2;
@@ -65,7 +68,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(69, 123);
+            this.label2.Location = new System.Drawing.Point(52, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 3;
@@ -74,9 +78,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(69, 209);
+            this.button1.Location = new System.Drawing.Point(52, 170);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 36);
+            this.button1.Size = new System.Drawing.Size(141, 29);
             this.button1.TabIndex = 4;
             this.button1.Text = "Подтвердить";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,16 +89,18 @@
             // 
             // OpenDepositForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 450);
+            this.ClientSize = new System.Drawing.Size(338, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSumma);
             this.Controls.Add(this.txtDepositCode);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OpenDepositForm";
             this.Text = "OpenDepositForm";
+            this.Load += new System.EventHandler(this.OpenDepositForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

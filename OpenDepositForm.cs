@@ -61,5 +61,10 @@ namespace Bank
                 MessageBox.Show("Введите корректную сумму для пополнения.");
             }
         }
+
+        private void OpenDepositForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -274,5 +274,21 @@ namespace Bank
             // Отображаем форму
             openDepositForm.Show(); 
         }
+
+        private void new_credit_Click(object sender, EventArgs e)
+        {
+            // Создаем экземпляр формы
+            OpenCreditForm openCreditForm = new OpenCreditForm(ID_Staff, db);
+
+            // Получаем паспортные данные из Staff_glav
+            int pasSeries = Convert.ToInt32(txtspas.Text);
+            int pasNumber = Convert.ToInt32(txtnpas.Text);
+
+            // Передаем данные в форму
+            openCreditForm.SetPassportData(pasSeries, pasNumber);
+
+            // Отображаем форму
+            openCreditForm.Show();
+        }
     }
 }

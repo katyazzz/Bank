@@ -255,6 +255,39 @@ namespace Bank
             return newDepositID;
         }
 
+        public int OpenNewCredit(int pasSeries, int pasNumber, float summa, int creditCode, int idStaff)
+        {
+            int newCreditID = -1;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("OpenNewCredit", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@PasSeries", pasSeries);
+                    command.Parameters.AddWithValue("@PasNumber", pasNumber);
+                    command.Parameters.AddWithValue("@Summa", summa);
+                    command.Parameters.AddWithValue("@CrediteCode", creditCode);
+                    command.Parameters.AddWithValue("@ID_Staff", idStaff);
+
+                    SqlParameter newCreditIDParameter = new SqlParameter("@NewID_Credit", SqlDbType.Int);
+                    newCreditIDParameter.Direction = ParameterDirection.Output;
+                    command.Parameters.Add(newCreditIDParameter);
+
+                    command.ExecuteNonQuery();
+
+                    newCreditID = (int)newCreditIDParameter.Value;
+                }
+            }
+
+            return newCreditID;
+        }
+
+
+
 
     }
 
