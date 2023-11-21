@@ -94,6 +94,13 @@ namespace Bank
             // закрыть соединение с БД
             Connection.Close();
 
+            NameKlient.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            NameKlient.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+            Connection.Open();
+            NameKlient.ExecuteNonQuery();
+            // закрыть соединение с БД
+            Connection.Close();
+            textBoxFIO.Text = NameKlient.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

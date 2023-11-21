@@ -123,11 +123,18 @@
   <metadata name="ShowPerAc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>179, 17</value>
   </metadata>
+  <data name="ShowPerAc.CommandText" xml:space="preserve">
+    <value>SELECT        AccountNumber AS [Номер счета], DateOfOpening AS [Дата открытия], Balance AS Баланс, Stat AS Статус, DateOfClosing AS [Дата закрытия]
+FROM            dbo.GetClientAccountsInfo(@PasSeries, @PasNumber) AS GetClientAccountsInfo_1</value>
+  </data>
   <metadata name="ShowVklad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>312, 17</value>
   </metadata>
   <metadata name="ShowCredit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>444, 17</value>
+  </metadata>
+  <metadata name="NameKlient.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>558, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>59</value>

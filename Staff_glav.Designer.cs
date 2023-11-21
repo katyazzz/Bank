@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_glav));
             this.txtspas = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,10 +58,11 @@
             this.history_dep = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFIO = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.sotr_tb = new System.Windows.Forms.TextBox();
             this.post_tb = new System.Windows.Forms.TextBox();
+            this.NameKlient = new System.Data.SqlClient.SqlCommand();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
@@ -299,8 +301,7 @@
             // 
             // ShowPerAc
             // 
-            this.ShowPerAc.CommandText = "SELECT AccountNumber, DateOfOpening, Balance, Stat, DateOfClosing\r\nFROM     dbo.G" +
-    "etClientAccountsInfo(@PasSeries, @PasNumber) AS GetClientAccountsInfo_1";
+            this.ShowPerAc.CommandText = resources.GetString("ShowPerAc.CommandText");
             this.ShowPerAc.Connection = this.Connection;
             this.ShowPerAc.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@PasSeries", System.Data.SqlDbType.Int),
@@ -308,8 +309,9 @@
             // 
             // ShowVklad
             // 
-            this.ShowVklad.CommandText = "SELECT ID_Deposit, StartDate, EndDate, Summa, Stat\r\nFROM     dbo.GetClientDeposit" +
-    "s(@PasSeries, @PasNumber) AS GetClientDeposits_1";
+            this.ShowVklad.CommandText = "SELECT        ID_Deposit, StartDate AS [Дата начала], EndDate AS [Дата окончания]" +
+    ", Summa AS Сумма, Stat AS Статус\r\nFROM            dbo.GetClientDeposits(@PasSeri" +
+    "es, @PasNumber) AS GetClientDeposits_1";
             this.ShowVklad.Connection = this.Connection;
             this.ShowVklad.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
             new System.Data.SqlClient.SqlParameter("@PasSeries", System.Data.SqlDbType.Int),
@@ -396,14 +398,14 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Клиент:";
             // 
-            // textBox1
+            // textBoxFIO
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(87, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 23);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxFIO.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFIO.Location = new System.Drawing.Point(87, 112);
+            this.textBoxFIO.Name = "textBoxFIO";
+            this.textBoxFIO.Size = new System.Drawing.Size(285, 23);
+            this.textBoxFIO.TabIndex = 25;
+            this.textBoxFIO.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label7
             // 
@@ -434,6 +436,15 @@
             this.post_tb.Size = new System.Drawing.Size(215, 26);
             this.post_tb.TabIndex = 28;
             // 
+            // NameKlient
+            // 
+            this.NameKlient.CommandText = "TakeFIOKlient";
+            this.NameKlient.CommandType = System.Data.CommandType.StoredProcedure;
+            this.NameKlient.Connection = this.Connection;
+            this.NameKlient.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@PasSeries", System.Data.SqlDbType.Int, 4),
+            new System.Data.SqlClient.SqlParameter("@PasNumber", System.Data.SqlDbType.Int, 6)});
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,7 +453,7 @@
             this.Controls.Add(this.post_tb);
             this.Controls.Add(this.sotr_tb);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.history_dep);
@@ -512,9 +523,10 @@
         private System.Windows.Forms.Button history_dep;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFIO;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox sotr_tb;
         private System.Windows.Forms.TextBox post_tb;
+        private System.Data.SqlClient.SqlCommand NameKlient;
     }
 }
