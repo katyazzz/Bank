@@ -63,6 +63,7 @@
             this.sotr_tb = new System.Windows.Forms.TextBox();
             this.post_tb = new System.Windows.Forms.TextBox();
             this.NameKlient = new System.Data.SqlClient.SqlCommand();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
@@ -445,11 +446,21 @@
             new System.Data.SqlClient.SqlParameter("@PasSeries", System.Data.SqlDbType.Int, 4),
             new System.Data.SqlClient.SqlParameter("@PasNumber", System.Data.SqlDbType.Int, 6)});
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(482, 130);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(174, 26);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "закрыть счет";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 620);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.post_tb);
             this.Controls.Add(this.sotr_tb);
             this.Controls.Add(this.label7);
@@ -528,5 +539,6 @@
         private System.Windows.Forms.TextBox sotr_tb;
         private System.Windows.Forms.TextBox post_tb;
         private System.Data.SqlClient.SqlCommand NameKlient;
+        private System.Windows.Forms.Button button4;
     }
 }

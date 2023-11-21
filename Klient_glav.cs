@@ -109,5 +109,10 @@ namespace Bank
         {
 
         }
+
+        private void listPersonalAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
