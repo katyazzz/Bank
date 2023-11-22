@@ -285,6 +285,7 @@
             // 
             // TransferMoneybtn
             // 
+            this.TransferMoneybtn.BackColor = System.Drawing.SystemColors.Info;
             this.TransferMoneybtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TransferMoneybtn.Location = new System.Drawing.Point(845, 251);
             this.TransferMoneybtn.Margin = new System.Windows.Forms.Padding(2);
@@ -292,7 +293,7 @@
             this.TransferMoneybtn.Size = new System.Drawing.Size(109, 27);
             this.TransferMoneybtn.TabIndex = 18;
             this.TransferMoneybtn.Text = "перевод";
-            this.TransferMoneybtn.UseVisualStyleBackColor = true;
+            this.TransferMoneybtn.UseVisualStyleBackColor = false;
             this.TransferMoneybtn.Click += new System.EventHandler(this.TransferMoneybtn_Click);
             // 
             // Connection
