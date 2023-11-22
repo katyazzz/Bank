@@ -62,7 +62,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.sotr_tb = new System.Windows.Forms.TextBox();
             this.post_tb = new System.Windows.Forms.TextBox();
-            this.NameKlient = new System.Data.SqlClient.SqlCommand();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
@@ -74,7 +73,7 @@
             // 
             this.txtspas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtspas.Location = new System.Drawing.Point(23, 39);
-            this.txtspas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtspas.Margin = new System.Windows.Forms.Padding(2);
             this.txtspas.Name = "txtspas";
             this.txtspas.Size = new System.Drawing.Size(116, 24);
             this.txtspas.TabIndex = 0;
@@ -97,7 +96,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(539, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 34);
             this.button1.TabIndex = 2;
@@ -110,7 +109,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.Info;
             this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(352, 20);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 35);
             this.button2.TabIndex = 3;
@@ -122,7 +121,7 @@
             // 
             this.txtnpas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtnpas.Location = new System.Drawing.Point(179, 39);
-            this.txtnpas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnpas.Margin = new System.Windows.Forms.Padding(2);
             this.txtnpas.Name = "txtnpas";
             this.txtnpas.Size = new System.Drawing.Size(116, 24);
             this.txtnpas.TabIndex = 4;
@@ -145,7 +144,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1190, 87);
             this.pictureBox1.TabIndex = 6;
@@ -155,7 +154,7 @@
             // 
             this.dataGridPA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPA.Location = new System.Drawing.Point(26, 191);
-            this.dataGridPA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridPA.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridPA.Name = "dataGridPA";
             this.dataGridPA.RowHeadersWidth = 51;
             this.dataGridPA.RowTemplate.Height = 24;
@@ -201,7 +200,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.Info;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(86, 160);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(172, 27);
             this.button3.TabIndex = 11;
@@ -213,7 +212,7 @@
             // 
             this.dataGridDep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDep.Location = new System.Drawing.Point(26, 321);
-            this.dataGridDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridDep.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridDep.Name = "dataGridDep";
             this.dataGridDep.RowHeadersWidth = 51;
             this.dataGridDep.RowTemplate.Height = 24;
@@ -224,7 +223,7 @@
             // 
             this.dataGridCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCredit.Location = new System.Drawing.Point(24, 439);
-            this.dataGridCredit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridCredit.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridCredit.Name = "dataGridCredit";
             this.dataGridCredit.RowHeadersWidth = 51;
             this.dataGridCredit.RowTemplate.Height = 24;
@@ -236,7 +235,7 @@
             this.new_dep.BackColor = System.Drawing.SystemColors.Info;
             this.new_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.new_dep.Location = new System.Drawing.Point(86, 291);
-            this.new_dep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.new_dep.Margin = new System.Windows.Forms.Padding(2);
             this.new_dep.Name = "new_dep";
             this.new_dep.Size = new System.Drawing.Size(172, 25);
             this.new_dep.TabIndex = 14;
@@ -249,7 +248,7 @@
             this.new_credit.BackColor = System.Drawing.SystemColors.Info;
             this.new_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.new_credit.Location = new System.Drawing.Point(86, 408);
-            this.new_credit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.new_credit.Margin = new System.Windows.Forms.Padding(2);
             this.new_credit.Name = "new_credit";
             this.new_credit.Size = new System.Drawing.Size(172, 25);
             this.new_credit.TabIndex = 15;
@@ -262,7 +261,7 @@
             this.button6.BackColor = System.Drawing.SystemColors.Info;
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(704, 185);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(109, 27);
             this.button6.TabIndex = 16;
@@ -275,7 +274,7 @@
             this.button7.BackColor = System.Drawing.SystemColors.Info;
             this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.Location = new System.Drawing.Point(704, 216);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(109, 27);
             this.button7.TabIndex = 17;
@@ -287,7 +286,7 @@
             // 
             this.button8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.Location = new System.Drawing.Point(704, 247);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(109, 27);
             this.button8.TabIndex = 18;
@@ -322,7 +321,7 @@
             // 
             this.button9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.Location = new System.Drawing.Point(482, 161);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(174, 26);
             this.button9.TabIndex = 19;
@@ -335,7 +334,7 @@
             this.history_credit.BackColor = System.Drawing.SystemColors.Info;
             this.history_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.history_credit.Location = new System.Drawing.Point(274, 408);
-            this.history_credit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.history_credit.Margin = new System.Windows.Forms.Padding(2);
             this.history_credit.Name = "history_credit";
             this.history_credit.Size = new System.Drawing.Size(238, 26);
             this.history_credit.TabIndex = 20;
@@ -357,7 +356,7 @@
             this.history_trans.BackColor = System.Drawing.SystemColors.Info;
             this.history_trans.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.history_trans.Location = new System.Drawing.Point(262, 161);
-            this.history_trans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.history_trans.Margin = new System.Windows.Forms.Padding(2);
             this.history_trans.Name = "history_trans";
             this.history_trans.Size = new System.Drawing.Size(216, 26);
             this.history_trans.TabIndex = 21;
@@ -370,7 +369,7 @@
             this.history_dep.BackColor = System.Drawing.SystemColors.Info;
             this.history_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.history_dep.Location = new System.Drawing.Point(274, 291);
-            this.history_dep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.history_dep.Margin = new System.Windows.Forms.Padding(2);
             this.history_dep.Name = "history_dep";
             this.history_dep.Size = new System.Drawing.Size(238, 25);
             this.history_dep.TabIndex = 22;
@@ -381,7 +380,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(701, 20);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(154, 34);
             this.button13.TabIndex = 23;
@@ -437,15 +436,6 @@
             this.post_tb.Size = new System.Drawing.Size(215, 26);
             this.post_tb.TabIndex = 28;
             // 
-            // NameKlient
-            // 
-            this.NameKlient.CommandText = "TakeFIOKlient";
-            this.NameKlient.CommandType = System.Data.CommandType.StoredProcedure;
-            this.NameKlient.Connection = this.Connection;
-            this.NameKlient.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
-            new System.Data.SqlClient.SqlParameter("@PasSeries", System.Data.SqlDbType.Int, 4),
-            new System.Data.SqlClient.SqlParameter("@PasNumber", System.Data.SqlDbType.Int, 6)});
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(482, 130);
@@ -490,7 +480,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtspas);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Staff_glav";
             this.Text = "Главная(Сотрудник)";
             this.Load += new System.EventHandler(this.Staff_glav_Load);
@@ -538,7 +528,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox sotr_tb;
         private System.Windows.Forms.TextBox post_tb;
-        private System.Data.SqlClient.SqlCommand NameKlient;
         private System.Windows.Forms.Button button4;
     }
 }

@@ -94,13 +94,39 @@ namespace Bank
             // закрыть соединение с БД
             Connection.Close();
 
-            NameKlient.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
-            NameKlient.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
-            Connection.Open();
-            NameKlient.ExecuteNonQuery();
-            // закрыть соединение с БД
-            Connection.Close();
-            textBoxFIO.Text = NameKlient.ToString();
+            
+
+
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string queryString = "SELECT FIO FROM Klient WHERE PasSeries = @PasSeries AND PasNumber = @PasNumber";
+
+                using (SqlCommand command = new SqlCommand(queryString, connection))
+                {
+                    // Замените 'ВашаСерия' и 'ВашНомер' на конкретные значения
+                    command.Parameters.AddWithValue("@PasSeries", txtspas.Text);
+                    command.Parameters.AddWithValue("@PasNumber", txtnpas.Text);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Если есть результат, установить значение в TextBox
+                            textBoxFIO.Text = reader["FIO"].ToString();
+                        }
+                        else
+                        {
+                            // Если нет результатов, очистить TextBox
+                            textBoxFIO.Text = string.Empty;
+                        }
+                    }
+                }
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
