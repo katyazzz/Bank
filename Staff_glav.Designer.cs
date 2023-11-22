@@ -320,6 +320,7 @@
             // 
             // frozebtn
             // 
+            this.frozebtn.BackColor = System.Drawing.SystemColors.Info;
             this.frozebtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frozebtn.Location = new System.Drawing.Point(970, 203);
             this.frozebtn.Margin = new System.Windows.Forms.Padding(2);
@@ -327,7 +328,7 @@
             this.frozebtn.Size = new System.Drawing.Size(174, 26);
             this.frozebtn.TabIndex = 19;
             this.frozebtn.Text = "заблокировать счет";
-            this.frozebtn.UseVisualStyleBackColor = true;
+            this.frozebtn.UseVisualStyleBackColor = false;
             this.frozebtn.Click += new System.EventHandler(this.button9_Click);
             // 
             // history_credit
@@ -448,6 +449,7 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.SystemColors.Info;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(970, 233);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
@@ -455,7 +457,7 @@
             this.button5.Size = new System.Drawing.Size(174, 26);
             this.button5.TabIndex = 30;
             this.button5.Text = "разблокировать счет";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Staff_glav
