@@ -47,7 +47,7 @@
             this.new_credit = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.TransferMoneybtn = new System.Windows.Forms.Button();
             this.Connection = new System.Data.SqlClient.SqlConnection();
             this.ShowPerAc = new System.Data.SqlClient.SqlCommand();
             this.ShowVklad = new System.Data.SqlClient.SqlCommand();
@@ -283,16 +283,17 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // TransferMoneybtn
             // 
-            this.button8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(845, 251);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(109, 27);
-            this.button8.TabIndex = 18;
-            this.button8.Text = "перевод";
-            this.button8.UseVisualStyleBackColor = true;
+            this.TransferMoneybtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TransferMoneybtn.Location = new System.Drawing.Point(845, 251);
+            this.TransferMoneybtn.Margin = new System.Windows.Forms.Padding(2);
+            this.TransferMoneybtn.Name = "TransferMoneybtn";
+            this.TransferMoneybtn.Size = new System.Drawing.Size(109, 27);
+            this.TransferMoneybtn.TabIndex = 18;
+            this.TransferMoneybtn.Text = "перевод";
+            this.TransferMoneybtn.UseVisualStyleBackColor = true;
+            this.TransferMoneybtn.Click += new System.EventHandler(this.TransferMoneybtn_Click);
             // 
             // Connection
             // 
@@ -477,7 +478,7 @@
             this.Controls.Add(this.history_trans);
             this.Controls.Add(this.history_credit);
             this.Controls.Add(this.frozebtn);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.TransferMoneybtn);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.new_credit);
@@ -529,7 +530,7 @@
         private System.Windows.Forms.Button new_credit;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button TransferMoneybtn;
         private System.Data.SqlClient.SqlConnection Connection;
         private System.Data.SqlClient.SqlCommand ShowPerAc;
         private System.Data.SqlClient.SqlCommand ShowVklad;

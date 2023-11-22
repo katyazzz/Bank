@@ -320,7 +320,7 @@ namespace Bank
             {
                 int selTransactNumber = -1;
                 // Получение номера выбранного счета
-                int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["AccountNumber"].Value;
+                int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["Номер счета"].Value;
 
                 // Создание новой формы для пополнения счета
                 RefillForm refillForm = new RefillForm(selTransactNumber,selectedAccountNumber, db);
@@ -430,6 +430,35 @@ namespace Bank
             catch (Exception ex)
             {
                 MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TransferMoneybtn_Click(object sender, EventArgs e)
+        {
+            // Проверяем, выбрана ли хотя бы одна строка в дата-гриде
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                // Извлекаем информацию о счете отправителя из выбранной строки
+                DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
+                int senderAccountNumber = Convert.ToInt32(selectedRow.Cells["Номер счета"].Value);
+
+                // Проверяем, что db не null
+                if (db != null)
+                {
+                    // Создаем форму MoneyTransferForm, передавая информацию о счете отправителя и экземпляр db
+                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm  (senderAccountNumber, db);
+
+                    // Отображаем форму
+                    moneyTransferForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Экземпляр DatabaseHelper не был проинициализирован.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет отправителя в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
