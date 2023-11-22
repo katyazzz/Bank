@@ -176,8 +176,61 @@ namespace Bank
 
         private void button9_Click(object sender, EventArgs e)
         {
+            // Проверяем, что в DataGridView выбрана хотя бы одна строка
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                // Получаем номер счета из выбранной строки
+                DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
+                int accountNumber = Convert.ToInt32(selectedRow.Cells["Номер счета"].Value);
 
+                // Замораживаем счет с помощью вашей процедуры или функции
+                FreezeAccount(accountNumber);
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для заморозки.");
+            }
         }
+
+        private void FreezeAccount(int accountNumber)
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("FreezeAccount", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@AccountNumber", accountNumber);
+
+                        // Выполняем процедуру и получаем результат
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Счет успешно заморожен.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Невозможно заморозить счет. Возможно, статус не был 'Открыт'.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Ошибка при замораживании счета: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void button12_Click(object sender, EventArgs e)
 
