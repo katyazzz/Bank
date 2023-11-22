@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Bank
 {
@@ -288,21 +289,56 @@ namespace Bank
 
         public void CloseAccount(int accountNumber)
         {
+            float accountBalance = GetAccountBalance(accountNumber);
+
+            // Проверяем, что баланс счета равен 0 перед закрытием
+            if (accountBalance == 0)
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("CloseAccount", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@AccountNumber", accountNumber);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show($"Счет {accountNumber} успешно закрыт.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Нельзя закрыть счет с положительным балансом. Переведите деньги на другой счет или снимите их.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public float GetAccountBalance(int accountNumber)
+        {
+            float balance = 0;
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand("CloseAccount", connection))
+                using (SqlCommand command = new SqlCommand("SELECT Balance FROM PersonalAccount WHERE AccountNumber = @AccountNumber", connection))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-
                     command.Parameters.AddWithValue("@AccountNumber", accountNumber);
 
-                    command.ExecuteNonQuery();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            balance = Convert.ToSingle(reader["Balance"]);
+                        }
+                    }
                 }
             }
-        }
 
+            return balance;
+        }
 
 
 

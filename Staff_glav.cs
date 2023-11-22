@@ -471,6 +471,8 @@ namespace Bank
                 int accountNumber = Convert.ToInt32(selectedRow.Cells["Номер счета"].Value);
                 float accountBalance = Convert.ToSingle(selectedRow.Cells["Баланс"].Value);
 
+                string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
                 // Проверяем баланс счета
                 if (accountBalance > 0)
                 {
@@ -485,13 +487,32 @@ namespace Bank
                         moneyTransferForm.ShowDialog();
                     }
                 }
+                if (accountBalance == 0)
+                {
+                    // Закрываем счет
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        using (SqlCommand command = new SqlCommand("CloseAccount", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@AccountNumber", accountNumber);
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    db.CloseAccount(accountNumber);
+                    // Показываем сообщение об успешном закрытии счета
+                    MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 // Закрываем счет (в данном случае, без проверки баланса)
-                db.CloseAccount(accountNumber);
+               // db.CloseAccount(accountNumber);
 
                 // Обновляем данные в дата-гриде или в других компонентах, если это необходимо
 
-                MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
