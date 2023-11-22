@@ -158,7 +158,7 @@
             this.dataGridPA.Name = "dataGridPA";
             this.dataGridPA.RowHeadersWidth = 51;
             this.dataGridPA.RowTemplate.Height = 24;
-            this.dataGridPA.Size = new System.Drawing.Size(630, 81);
+            this.dataGridPA.Size = new System.Drawing.Size(787, 94);
             this.dataGridPA.TabIndex = 7;
             this.dataGridPA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -188,7 +188,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(22, 414);
+            this.label5.Location = new System.Drawing.Point(25, 443);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 14);
@@ -211,18 +211,18 @@
             // dataGridDep
             // 
             this.dataGridDep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDep.Location = new System.Drawing.Point(26, 321);
+            this.dataGridDep.Location = new System.Drawing.Point(23, 320);
             this.dataGridDep.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridDep.Name = "dataGridDep";
             this.dataGridDep.RowHeadersWidth = 51;
             this.dataGridDep.RowTemplate.Height = 24;
-            this.dataGridDep.Size = new System.Drawing.Size(787, 71);
+            this.dataGridDep.Size = new System.Drawing.Size(787, 94);
             this.dataGridDep.TabIndex = 12;
             // 
             // dataGridCredit
             // 
             this.dataGridCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCredit.Location = new System.Drawing.Point(24, 439);
+            this.dataGridCredit.Location = new System.Drawing.Point(23, 476);
             this.dataGridCredit.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridCredit.Name = "dataGridCredit";
             this.dataGridCredit.RowHeadersWidth = 51;
@@ -247,7 +247,7 @@
             // 
             this.new_credit.BackColor = System.Drawing.SystemColors.Info;
             this.new_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.new_credit.Location = new System.Drawing.Point(86, 408);
+            this.new_credit.Location = new System.Drawing.Point(89, 437);
             this.new_credit.Margin = new System.Windows.Forms.Padding(2);
             this.new_credit.Name = "new_credit";
             this.new_credit.Size = new System.Drawing.Size(172, 25);
@@ -260,7 +260,7 @@
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Info;
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(704, 185);
+            this.button6.Location = new System.Drawing.Point(845, 189);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(109, 27);
@@ -273,7 +273,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.Info;
             this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(704, 216);
+            this.button7.Location = new System.Drawing.Point(845, 220);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(109, 27);
@@ -285,7 +285,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(704, 247);
+            this.button8.Location = new System.Drawing.Point(845, 251);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(109, 27);
@@ -333,7 +333,7 @@
             // 
             this.history_credit.BackColor = System.Drawing.SystemColors.Info;
             this.history_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.history_credit.Location = new System.Drawing.Point(274, 408);
+            this.history_credit.Location = new System.Drawing.Point(277, 437);
             this.history_credit.Margin = new System.Windows.Forms.Padding(2);
             this.history_credit.Name = "history_credit";
             this.history_credit.Size = new System.Drawing.Size(238, 26);
@@ -438,9 +438,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(482, 130);
+            this.button4.Location = new System.Drawing.Point(661, 161);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 26);
+            this.button4.Size = new System.Drawing.Size(151, 26);
             this.button4.TabIndex = 29;
             this.button4.Text = "закрыть счет";
             this.button4.UseVisualStyleBackColor = true;
