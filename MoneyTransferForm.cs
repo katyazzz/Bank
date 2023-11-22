@@ -65,6 +65,7 @@ namespace Bank
             }
         }
 
+
         private void MoneyTransferForm_Load(object sender, EventArgs e)
         {
 

@@ -461,5 +461,42 @@ namespace Bank
                 MessageBox.Show("Выберите счет отправителя в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                // Извлекаем информацию о счете из выбранной строки
+                DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
+                int accountNumber = Convert.ToInt32(selectedRow.Cells["Номер счета"].Value);
+                float accountBalance = Convert.ToSingle(selectedRow.Cells["Баланс"].Value);
+
+                // Проверяем баланс счета
+                if (accountBalance > 0)
+                {
+                    // Если на счете есть деньги, предлагаем пользователю перевести их или вывести
+                    DialogResult result = MessageBox.Show("На счете есть деньги. Желаете перевести их на другой счет?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Создаем форму для перевода денег
+                        MoneyTransferForm moneyTransferForm = new MoneyTransferForm(accountNumber, db);
+
+                        moneyTransferForm.ShowDialog();
+                    }
+                }
+
+                // Закрываем счет (в данном случае, без проверки баланса)
+                db.CloseAccount(accountNumber);
+
+                // Обновляем данные в дата-гриде или в других компонентах, если это необходимо
+
+                MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для закрытия в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

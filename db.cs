@@ -286,6 +286,23 @@ namespace Bank
             return newCreditID;
         }
 
+        public void CloseAccount(int accountNumber)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("CloseAccount", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@AccountNumber", accountNumber);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
 
 
 

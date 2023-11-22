@@ -62,7 +62,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.sotr_tb = new System.Windows.Forms.TextBox();
             this.post_tb = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.closebtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
@@ -440,14 +440,15 @@
             this.post_tb.Size = new System.Drawing.Size(215, 26);
             this.post_tb.TabIndex = 28;
             // 
-            // button4
+            // closebtn
             // 
-            this.button4.Location = new System.Drawing.Point(545, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 26);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "закрыть счет";
-            this.button4.UseVisualStyleBackColor = true;
+            this.closebtn.Location = new System.Drawing.Point(545, 160);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(151, 26);
+            this.closebtn.TabIndex = 29;
+            this.closebtn.Text = "закрыть счет";
+            this.closebtn.UseVisualStyleBackColor = true;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // button5
             // 
@@ -468,7 +469,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 620);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.closebtn);
             this.Controls.Add(this.post_tb);
             this.Controls.Add(this.sotr_tb);
             this.Controls.Add(this.label7);
@@ -546,7 +547,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox sotr_tb;
         private System.Windows.Forms.TextBox post_tb;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button button5;
     }
 }
