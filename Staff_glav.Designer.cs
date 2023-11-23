@@ -442,12 +442,13 @@
             // 
             // closebtn
             // 
+            this.closebtn.BackColor = System.Drawing.SystemColors.Info;
             this.closebtn.Location = new System.Drawing.Point(545, 160);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(151, 26);
             this.closebtn.TabIndex = 29;
             this.closebtn.Text = "закрыть счет";
-            this.closebtn.UseVisualStyleBackColor = true;
+            this.closebtn.UseVisualStyleBackColor = false;
             this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
             // 
             // button5
