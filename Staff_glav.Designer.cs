@@ -443,6 +443,7 @@
             // closebtn
             // 
             this.closebtn.BackColor = System.Drawing.SystemColors.Info;
+            this.closebtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebtn.Location = new System.Drawing.Point(545, 160);
             this.closebtn.Name = "closebtn";
             this.closebtn.Size = new System.Drawing.Size(151, 26);
