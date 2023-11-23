@@ -501,10 +501,10 @@ namespace Bank
 
                             command.ExecuteNonQuery();
                         }
+                        db.CloseAccount(accountNumber);
                     }
-                    db.CloseAccount(accountNumber);
                     // Показываем сообщение об успешном закрытии счета
-                    MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 // Закрываем счет (в данном случае, без проверки баланса)
