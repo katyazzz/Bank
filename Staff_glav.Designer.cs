@@ -56,7 +56,7 @@
             this.ShowCredit = new System.Data.SqlClient.SqlCommand();
             this.history_trans = new System.Windows.Forms.Button();
             this.history_dep = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.CreateStaff = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxFIO = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -147,7 +147,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1190, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(1232, 87);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -381,16 +381,16 @@
             this.history_dep.UseVisualStyleBackColor = false;
             this.history_dep.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button13
+            // CreateStaff
             // 
-            this.button13.Location = new System.Drawing.Point(701, 20);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(154, 34);
-            this.button13.TabIndex = 23;
-            this.button13.Text = "создать сотрудника";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.CreateStaff.Location = new System.Drawing.Point(701, 20);
+            this.CreateStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.CreateStaff.Name = "CreateStaff";
+            this.CreateStaff.Size = new System.Drawing.Size(154, 34);
+            this.CreateStaff.TabIndex = 23;
+            this.CreateStaff.Text = "создать сотрудника";
+            this.CreateStaff.UseVisualStyleBackColor = true;
+            this.CreateStaff.Click += new System.EventHandler(this.button13_Click);
             // 
             // label6
             // 
@@ -416,7 +416,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(860, 25);
+            this.label7.Location = new System.Drawing.Point(902, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 17);
             this.label7.TabIndex = 26;
@@ -426,7 +426,7 @@
             // sotr_tb
             // 
             this.sotr_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sotr_tb.Location = new System.Drawing.Point(960, 13);
+            this.sotr_tb.Location = new System.Drawing.Point(1002, 11);
             this.sotr_tb.Name = "sotr_tb";
             this.sotr_tb.Size = new System.Drawing.Size(215, 26);
             this.sotr_tb.TabIndex = 27;
@@ -435,7 +435,7 @@
             // post_tb
             // 
             this.post_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.post_tb.Location = new System.Drawing.Point(960, 41);
+            this.post_tb.Location = new System.Drawing.Point(1002, 39);
             this.post_tb.Name = "post_tb";
             this.post_tb.Size = new System.Drawing.Size(215, 26);
             this.post_tb.TabIndex = 28;
@@ -469,7 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 620);
+            this.ClientSize = new System.Drawing.Size(1229, 620);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.post_tb);
@@ -477,7 +477,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxFIO);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.CreateStaff);
             this.Controls.Add(this.history_dep);
             this.Controls.Add(this.history_trans);
             this.Controls.Add(this.history_credit);
@@ -543,7 +543,7 @@
         private System.Data.SqlClient.SqlCommand ShowCredit;
         private System.Windows.Forms.Button history_trans;
         private System.Windows.Forms.Button history_dep;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button CreateStaff;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxFIO;
         private System.Windows.Forms.Label label7;

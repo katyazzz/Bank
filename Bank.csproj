@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CreateEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEmployeeForm.Designer.cs">
+      <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateKlient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateEmployeeForm.resx">
+      <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateKlient.resx">
       <DependentUpon>CreateKlient.cs</DependentUpon>
     </EmbeddedResource>

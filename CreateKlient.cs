@@ -47,7 +47,8 @@ namespace Bank
                                                           // вывод результата через окно сообщения
             MessageBox.Show("Пользователь добавлен!", "Успешно", MessageBoxButtons.OK,
             MessageBoxIcon.Information);
-           // examBindingSource.AddNew();
+            // examBindingSource.AddNew();
+            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -342,6 +342,10 @@ namespace Bank
 
         private void button13_Click(object sender, EventArgs e)
         {
+            
+            CreateEmployeeForm createEmployeeForm = new CreateEmployeeForm();
+
+            createEmployeeForm.Show();
 
         }
 
