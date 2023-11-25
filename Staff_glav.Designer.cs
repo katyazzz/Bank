@@ -64,6 +64,8 @@
             this.post_tb = new System.Windows.Forms.TextBox();
             this.closebtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
@@ -147,7 +149,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1232, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(1232, 107);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -467,11 +469,33 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(1002, 72);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(134, 23);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "сменить пароль";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(1142, 72);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "выйти";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 620);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.closebtn);
             this.Controls.Add(this.post_tb);
@@ -553,5 +577,7 @@
         private System.Windows.Forms.TextBox post_tb;
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button8;
     }
 }
