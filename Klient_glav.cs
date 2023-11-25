@@ -266,5 +266,20 @@ namespace Bank
             LoadClientDeposits();
             LoadClientCredits();
         }
+
+        private void btnhistoryPA_Click(object sender, EventArgs e)
+        {
+            // Проверка наличия выбранного клиента
+            if (ID_Klient > 0)
+            {
+                // Создание и отображение формы с историей операций для всех счетов клиента
+                AccountHistoryForm historyForm = new AccountHistoryForm(ID_Klient, db);
+                historyForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Выберите клиента для просмотра истории операций.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

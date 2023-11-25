@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountHistoryForm.Designer.cs">
+      <DependentUpon>AccountHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BDBankDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -162,6 +168,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountHistoryForm.resx">
+      <DependentUpon>AccountHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateEmployeeForm.resx">
       <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>

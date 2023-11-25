@@ -77,6 +77,7 @@ namespace Bank
             this.btnhistoryPA.TabIndex = 1;
             this.btnhistoryPA.Text = "История операций";
             this.btnhistoryPA.UseVisualStyleBackColor = false;
+            this.btnhistoryPA.Click += new System.EventHandler(this.btnhistoryPA_Click);
             // 
             // label1
             // 
@@ -97,20 +98,20 @@ namespace Bank
             this.label2.Location = new System.Drawing.Point(32, 294);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 23);
+            this.label2.Size = new System.Drawing.Size(84, 23);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Вклады:";
+            this.label2.Text = "Вклады";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(28, 450);
+            this.label3.Location = new System.Drawing.Point(28, 464);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 23);
+            this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Кредиты:";
+            this.label3.Text = "Кредиты";
             // 
             // button3
             // 
