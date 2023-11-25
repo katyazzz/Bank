@@ -28,6 +28,7 @@ namespace Bank
             this.db = db;
 
             LoadClientAccounts(ID_Klient);
+            LoadClientDeposits();
 
         }
 
@@ -61,6 +62,36 @@ namespace Bank
             }
         }
 
+        private void LoadClientDeposits()
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("GetClientDeposit", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID_Klient", this.ID_Klient);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dataGridDep.DataSource = dataTable;
+
+                        // Переименование столбцов, если необходимо
+                        dataGridDep.Columns["ID_Deposit"].HeaderText = "ID депозита";
+                        dataGridDep.Columns["StartDate"].HeaderText = "Дата начала";
+                        dataGridDep.Columns["EndDate"].HeaderText = "Дата окончания";
+                        dataGridDep.Columns["Summa"].HeaderText = "Сумма";
+                        dataGridDep.Columns["Stat"].HeaderText = "Статус";
+                    }
+                }
+            }
+        }
 
 
 
