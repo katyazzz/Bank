@@ -35,7 +35,6 @@ namespace Bank
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.listVklad = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -88,17 +87,6 @@ namespace Bank
             this.label1.Text = "Платежные счета";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // listVklad
-            // 
-            this.listVklad.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listVklad.FormattingEnabled = true;
-            this.listVklad.ItemHeight = 12;
-            this.listVklad.Location = new System.Drawing.Point(36, 570);
-            this.listVklad.Margin = new System.Windows.Forms.Padding(2);
-            this.listVklad.Name = "listVklad";
-            this.listVklad.Size = new System.Drawing.Size(512, 28);
-            this.listVklad.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -114,7 +102,7 @@ namespace Bank
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(28, 417);
+            this.label3.Location = new System.Drawing.Point(28, 450);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 23);
@@ -173,7 +161,7 @@ namespace Bank
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(692, 457);
+            this.button7.Location = new System.Drawing.Point(692, 490);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(193, 28);
@@ -202,15 +190,15 @@ namespace Bank
             this.dataGridDep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDep.Location = new System.Drawing.Point(32, 321);
             this.dataGridDep.Name = "dataGridDep";
-            this.dataGridDep.Size = new System.Drawing.Size(640, 93);
+            this.dataGridDep.Size = new System.Drawing.Size(640, 126);
             this.dataGridDep.TabIndex = 16;
             // 
             // dataGridCredit
             // 
             this.dataGridCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCredit.Location = new System.Drawing.Point(32, 457);
+            this.dataGridCredit.Location = new System.Drawing.Point(32, 490);
             this.dataGridCredit.Name = "dataGridCredit";
-            this.dataGridCredit.Size = new System.Drawing.Size(640, 78);
+            this.dataGridCredit.Size = new System.Drawing.Size(640, 105);
             this.dataGridCredit.TabIndex = 17;
             // 
             // Klient_glav
@@ -230,7 +218,6 @@ namespace Bank
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listVklad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -251,7 +238,6 @@ namespace Bank
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private Label label1;
-        private ListBox listVklad;
         private Label label2;
         private Label label3;
         private Button button3;
