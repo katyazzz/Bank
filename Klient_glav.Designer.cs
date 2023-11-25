@@ -163,6 +163,7 @@ namespace Bank
             this.btnhistoryDeposit.TabIndex = 12;
             this.btnhistoryDeposit.Text = "История операций";
             this.btnhistoryDeposit.UseVisualStyleBackColor = true;
+            this.btnhistoryDeposit.Click += new System.EventHandler(this.btnhistoryDeposit_Click);
             // 
             // btnhistoryCredit
             // 

@@ -106,6 +106,12 @@
     <Compile Include="DepositPaymentsHistoryForm.Designer.cs">
       <DependentUpon>DepositPaymentsHistoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepositPaymentsHistoryKlientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositPaymentsHistoryKlientForm.Designer.cs">
+      <DependentUpon>DepositPaymentsHistoryKlientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntStaf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DepositPaymentsHistoryForm.resx">
       <DependentUpon>DepositPaymentsHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositPaymentsHistoryKlientForm.resx">
+      <DependentUpon>DepositPaymentsHistoryKlientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EntStaf.resx">
       <DependentUpon>EntStaf.cs</DependentUpon>
