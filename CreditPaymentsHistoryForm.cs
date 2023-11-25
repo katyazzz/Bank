@@ -51,5 +51,10 @@ namespace Bank
         {
 
         }
+
+        private void dataGridViewCreditPaymentsHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

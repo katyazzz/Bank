@@ -35,18 +35,21 @@
             // dataGridViewCreditPaymentsHistory
             // 
             this.dataGridViewCreditPaymentsHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCreditPaymentsHistory.Location = new System.Drawing.Point(33, 157);
+            this.dataGridViewCreditPaymentsHistory.Location = new System.Drawing.Point(25, 128);
+            this.dataGridViewCreditPaymentsHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewCreditPaymentsHistory.Name = "dataGridViewCreditPaymentsHistory";
             this.dataGridViewCreditPaymentsHistory.RowTemplate.Height = 24;
-            this.dataGridViewCreditPaymentsHistory.Size = new System.Drawing.Size(724, 252);
+            this.dataGridViewCreditPaymentsHistory.Size = new System.Drawing.Size(543, 205);
             this.dataGridViewCreditPaymentsHistory.TabIndex = 0;
+            this.dataGridViewCreditPaymentsHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreditPaymentsHistory_CellContentClick);
             // 
             // CreditPaymentsHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.dataGridViewCreditPaymentsHistory);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreditPaymentsHistoryForm";
             this.Text = "CreditPaymentsHistoryForm";
             this.Load += new System.EventHandler(this.CreditPaymentsHistoryForm_Load);

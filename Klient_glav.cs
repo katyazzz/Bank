@@ -26,72 +26,43 @@ namespace Bank
             InitializeComponent();
             this.ID_Klient = ID_Klient;
             this.db = db;
-            LoadAccountNumbers();
-            LoadDeposits();
+
+            LoadClientAccounts(ID_Klient);
+
         }
 
-        private void LoadAccountNumbers()
+        private void LoadClientAccounts(int ID_Klient)
         {
-            List<(int,float)> accountInfo = db.GetAccountNumbersWithBalance(ID_Klient);
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
 
-            foreach (var info in accountInfo)
-            {
-                int accountNumber = info.Item1;
-                float balance = info.Item2;
-
-
-                listPersonalAccounts.Items.Add($"{accountNumber} (Баланс: {balance:C})");
-            }
-        }
-
-        private void LoadDeposits()
-        {
-            List<(int, DateTime, float)> depositInfo = db.GetDeposits(ID_Klient);
-
-            foreach (var info in depositInfo)
-            {
-                int depositID = info.Item1;
-                DateTime startDate = info.Item2;
-                float summa = info.Item3;
-
-                string depositTypeInfo = GetDepositTypeInfo(depositID);
-                // Добавляем отладочные выводы
-                Console.WriteLine($"ID: {depositID}, Start Date: {startDate}, Summa: {summa}");
-                listVklad.Items.Add($"ID: {depositID}, Start Date: {startDate}, Summa: {summa}, {{title}} ({{conditions}}, срок: {{term}} месяцев)");
-
-            }
-        }
-
-
-
-        private string GetDepositTypeInfo(int depositCode)
-        {
-            string query = "SELECT Title, Conditions, Term FROM TypeOfDeposits WHERE DepositCode = @DepositCode";
-
-            using (SqlConnection connection = new SqlConnection(db.GetConnectionString()))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand command = new SqlCommand("GetClientAccounts", connection))
                 {
-                    command.Parameters.AddWithValue("@DepositCode", depositCode);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID_Klient", this.ID_Klient);
 
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
-                        if (reader.Read())
-                        {
-                            string title = reader.GetString(0);
-                            string conditions = reader.GetString(1);
-                            int term = reader.GetInt32(2);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
 
-                            return $"{title} ({conditions}, срок: {term} месяцев)";
-                        }
+                        dataGridPA.DataSource = dataTable;
+
+                        dataGridPA.Columns["AccountNumber"].HeaderText = "Номер счета";
+                        dataGridPA.Columns["DateOfOpening"].HeaderText = "Дата открытия";
+                        dataGridPA.Columns["DateOfClosing"].HeaderText = "Дата закрытия";
+                        dataGridPA.Columns["Balance"].HeaderText = "Баланс";
+                        dataGridPA.Columns["Stat"].HeaderText = "Статус";
                     }
                 }
             }
-
-            return string.Empty;
         }
+
+
+
 
 
 
@@ -107,7 +78,7 @@ namespace Bank
 
         private void Klient_glav_Load(object sender, EventArgs e)
         {
-
+            LoadClientAccounts(ID_Klient);
         }
 
         private void listPersonalAccounts_SelectedIndexChanged(object sender, EventArgs e)
