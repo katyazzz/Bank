@@ -383,13 +383,15 @@
             // 
             // CreateStaff
             // 
+            this.CreateStaff.BackColor = System.Drawing.SystemColors.Info;
+            this.CreateStaff.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateStaff.Location = new System.Drawing.Point(701, 20);
             this.CreateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.CreateStaff.Name = "CreateStaff";
-            this.CreateStaff.Size = new System.Drawing.Size(154, 34);
+            this.CreateStaff.Size = new System.Drawing.Size(170, 34);
             this.CreateStaff.TabIndex = 23;
             this.CreateStaff.Text = "создать сотрудника";
-            this.CreateStaff.UseVisualStyleBackColor = true;
+            this.CreateStaff.UseVisualStyleBackColor = false;
             this.CreateStaff.Click += new System.EventHandler(this.button13_Click);
             // 
             // label6
