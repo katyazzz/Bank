@@ -168,6 +168,7 @@ namespace Bank
             // 
             // btnhistoryCredit
             // 
+            this.btnhistoryCredit.BackColor = System.Drawing.SystemColors.Info;
             this.btnhistoryCredit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryCredit.Location = new System.Drawing.Point(692, 490);
             this.btnhistoryCredit.Margin = new System.Windows.Forms.Padding(2);
@@ -175,7 +176,7 @@ namespace Bank
             this.btnhistoryCredit.Size = new System.Drawing.Size(193, 28);
             this.btnhistoryCredit.TabIndex = 13;
             this.btnhistoryCredit.Text = "История операций";
-            this.btnhistoryCredit.UseVisualStyleBackColor = true;
+            this.btnhistoryCredit.UseVisualStyleBackColor = false;
             this.btnhistoryCredit.Click += new System.EventHandler(this.btnhistoryCredit_Click);
             // 
             // tbFIOKlient
