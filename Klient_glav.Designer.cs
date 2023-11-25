@@ -47,10 +47,10 @@ namespace Bank
             this.tbFIOKlient = new System.Windows.Forms.TextBox();
             this.dataGridPA = new System.Windows.Forms.DataGridView();
             this.dataGridDep = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridCredit = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -205,20 +205,20 @@ namespace Bank
             this.dataGridDep.Size = new System.Drawing.Size(640, 93);
             this.dataGridDep.TabIndex = 16;
             // 
-            // dataGridView3
+            // dataGridCredit
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(32, 457);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(640, 78);
-            this.dataGridView3.TabIndex = 17;
+            this.dataGridCredit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCredit.Location = new System.Drawing.Point(32, 457);
+            this.dataGridCredit.Name = "dataGridCredit";
+            this.dataGridCredit.Size = new System.Drawing.Size(640, 78);
+            this.dataGridCredit.TabIndex = 17;
             // 
             // Klient_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 652);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dataGridCredit);
             this.Controls.Add(this.dataGridDep);
             this.Controls.Add(this.dataGridPA);
             this.Controls.Add(this.tbFIOKlient);
@@ -240,7 +240,7 @@ namespace Bank
             this.Load += new System.EventHandler(this.Klient_glav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +263,6 @@ namespace Bank
         private TextBox tbFIOKlient;
         private DataGridView dataGridPA;
         private DataGridView dataGridDep;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridCredit;
     }
 }

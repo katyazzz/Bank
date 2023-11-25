@@ -29,7 +29,7 @@ namespace Bank
 
             LoadClientAccounts(ID_Klient);
             LoadClientDeposits();
-
+            LoadClientCredits();
         }
 
         private void LoadClientAccounts(int ID_Klient)
@@ -93,7 +93,36 @@ namespace Bank
             }
         }
 
+        private void LoadClientCredits()
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("GetClientCredit", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID_Klient", this.ID_Klient);
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dataGridCredit.DataSource = dataTable;
+
+                        // Переименование столбцов, если необходимо
+                        dataGridCredit.Columns["ID_Credit"].HeaderText = "ID кредита";
+                        dataGridCredit.Columns["StartDate"].HeaderText = "Дата начала";
+                        dataGridCredit.Columns["EndDate"].HeaderText = "Дата окончания";
+                        dataGridCredit.Columns["Summa"].HeaderText = "Сумма";
+                        dataGridCredit.Columns["Stat"].HeaderText = "Статус";
+                    }
+                }
+            }
+        }
 
 
 
