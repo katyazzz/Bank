@@ -109,7 +109,7 @@ namespace Bank
 
         private void Klient_glav_Load(object sender, EventArgs e)
         {
-            LoadClientAccounts(ID_Klient);
+            //LoadClientAccounts(ID_Klient);
         }
 
         private void listPersonalAccounts_SelectedIndexChanged(object sender, EventArgs e)
