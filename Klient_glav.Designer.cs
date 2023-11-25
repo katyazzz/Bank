@@ -68,7 +68,7 @@ namespace Bank
             // 
             // btnhistoryPA
             // 
-            this.btnhistoryPA.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnhistoryPA.BackColor = System.Drawing.SystemColors.Info;
             this.btnhistoryPA.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryPA.Location = new System.Drawing.Point(692, 154);
             this.btnhistoryPA.Margin = new System.Windows.Forms.Padding(2);

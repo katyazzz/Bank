@@ -59,7 +59,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridHis);
             this.Name = "AccountHistoryForm";
-            this.Text = "AccountHistoryForm";
+            this.Text = "История операций (Клиент)";
             this.Load += new System.EventHandler(this.AccountHistoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridHis)).EndInit();
             this.ResumeLayout(false);
