@@ -155,6 +155,7 @@ namespace Bank
             // 
             // btnhistoryDeposit
             // 
+            this.btnhistoryDeposit.BackColor = System.Drawing.SystemColors.Info;
             this.btnhistoryDeposit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryDeposit.Location = new System.Drawing.Point(692, 321);
             this.btnhistoryDeposit.Margin = new System.Windows.Forms.Padding(2);
@@ -162,7 +163,7 @@ namespace Bank
             this.btnhistoryDeposit.Size = new System.Drawing.Size(193, 28);
             this.btnhistoryDeposit.TabIndex = 12;
             this.btnhistoryDeposit.Text = "История операций";
-            this.btnhistoryDeposit.UseVisualStyleBackColor = true;
+            this.btnhistoryDeposit.UseVisualStyleBackColor = false;
             this.btnhistoryDeposit.Click += new System.EventHandler(this.btnhistoryDeposit_Click);
             // 
             // btnhistoryCredit
