@@ -32,48 +32,49 @@ namespace Bank
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btntransfer = new System.Windows.Forms.Button();
+            this.btnhistoryPA = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnfreeze = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnhistoryDeposit = new System.Windows.Forms.Button();
+            this.btnhistoryCredit = new System.Windows.Forms.Button();
             this.tbFIOKlient = new System.Windows.Forms.TextBox();
             this.dataGridPA = new System.Windows.Forms.DataGridView();
             this.dataGridDep = new System.Windows.Forms.DataGridView();
             this.dataGridCredit = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btntransfer
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(692, 187);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Выполнить перевод";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btntransfer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btntransfer.Location = new System.Drawing.Point(692, 220);
+            this.btntransfer.Margin = new System.Windows.Forms.Padding(2);
+            this.btntransfer.Name = "btntransfer";
+            this.btntransfer.Size = new System.Drawing.Size(193, 28);
+            this.btntransfer.TabIndex = 0;
+            this.btntransfer.Text = "Выполнить перевод";
+            this.btntransfer.UseVisualStyleBackColor = true;
+            this.btntransfer.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnhistoryPA
             // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(692, 219);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "История операций";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnhistoryPA.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnhistoryPA.Location = new System.Drawing.Point(692, 154);
+            this.btnhistoryPA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnhistoryPA.Name = "btnhistoryPA";
+            this.btnhistoryPA.Size = new System.Drawing.Size(193, 28);
+            this.btnhistoryPA.TabIndex = 1;
+            this.btnhistoryPA.Text = "История операций";
+            this.btnhistoryPA.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -118,15 +119,17 @@ namespace Bank
             this.button3.Text = "поменять пароль";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnfreeze
             // 
-            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(692, 154);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(193, 28);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "заблокировать счет";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnfreeze.BackColor = System.Drawing.SystemColors.Info;
+            this.btnfreeze.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnfreeze.Location = new System.Drawing.Point(692, 187);
+            this.btnfreeze.Name = "btnfreeze";
+            this.btnfreeze.Size = new System.Drawing.Size(193, 28);
+            this.btnfreeze.TabIndex = 9;
+            this.btnfreeze.Text = "заблокировать счет";
+            this.btnfreeze.UseVisualStyleBackColor = false;
+            this.btnfreeze.Click += new System.EventHandler(this.btnfreeze_Click);
             // 
             // label4
             // 
@@ -147,27 +150,27 @@ namespace Bank
             this.button5.Text = "выйти";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnhistoryDeposit
             // 
-            this.button6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(692, 321);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(193, 28);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "История операций";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnhistoryDeposit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnhistoryDeposit.Location = new System.Drawing.Point(692, 321);
+            this.btnhistoryDeposit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnhistoryDeposit.Name = "btnhistoryDeposit";
+            this.btnhistoryDeposit.Size = new System.Drawing.Size(193, 28);
+            this.btnhistoryDeposit.TabIndex = 12;
+            this.btnhistoryDeposit.Text = "История операций";
+            this.btnhistoryDeposit.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnhistoryCredit
             // 
-            this.button7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(692, 490);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(193, 28);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "История операций";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnhistoryCredit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnhistoryCredit.Location = new System.Drawing.Point(692, 490);
+            this.btnhistoryCredit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnhistoryCredit.Name = "btnhistoryCredit";
+            this.btnhistoryCredit.Size = new System.Drawing.Size(193, 28);
+            this.btnhistoryCredit.TabIndex = 13;
+            this.btnhistoryCredit.Text = "История операций";
+            this.btnhistoryCredit.UseVisualStyleBackColor = true;
             // 
             // tbFIOKlient
             // 
@@ -201,26 +204,37 @@ namespace Bank
             this.dataGridCredit.Size = new System.Drawing.Size(640, 105);
             this.dataGridCredit.TabIndex = 17;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(597, 95);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(117, 23);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.Text = "обновление";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
+            // 
             // Klient_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 652);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dataGridCredit);
             this.Controls.Add(this.dataGridDep);
             this.Controls.Add(this.dataGridPA);
             this.Controls.Add(this.tbFIOKlient);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnhistoryCredit);
+            this.Controls.Add(this.btnhistoryDeposit);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnfreeze);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnhistoryPA);
+            this.Controls.Add(this.btntransfer);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Klient_glav";
             this.Text = "Главная (Клиент)";
@@ -235,20 +249,21 @@ namespace Bank
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btntransfer;
+        private System.Windows.Forms.Button btnhistoryPA;
         private Label label1;
         private Label label2;
         private Label label3;
         private Button button3;
-        private Button button4;
+        private Button btnfreeze;
         private Label label4;
         private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button btnhistoryDeposit;
+        private Button btnhistoryCredit;
         private TextBox tbFIOKlient;
         private DataGridView dataGridPA;
         private DataGridView dataGridDep;
         private DataGridView dataGridCredit;
+        private Button btnRefresh;
     }
 }

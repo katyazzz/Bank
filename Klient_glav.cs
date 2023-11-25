@@ -31,7 +31,9 @@ namespace Bank
             LoadClientDeposits();
             LoadClientCredits();
             LoadClientInformation();
+            btnRefresh.Click += btnRefresh_Click_1;
         }
+
 
         private void LoadClientAccounts(int ID_Klient)
         {
@@ -151,6 +153,44 @@ namespace Bank
             }
         }
 
+        private void FreezeAccount(int accountNumber)
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("FreezeAccount", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@AccountNumber", accountNumber);
+
+                        // Выполняем процедуру и получаем результат
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Счет успешно заморожен.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Невозможно заморозить счет. Возможно, статус не был 'Открыт'.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Ошибка при замораживании счета: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
 
@@ -158,7 +198,31 @@ namespace Bank
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Проверяем, выбрана ли хотя бы одна строка в дата-гриде
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                // Извлекаем информацию о счете отправителя из выбранной строки
+                DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
+                int senderAccountNumber = Convert.ToInt32(selectedRow.Cells["AccountNumber"].Value);
 
+                // Проверяем, что db не null
+                if (db != null)
+                {
+                    // Создаем форму MoneyTransferForm, передавая информацию о счете отправителя и экземпляр db
+                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm(senderAccountNumber, db);
+
+                    // Отображаем форму
+                    moneyTransferForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Экземпляр DatabaseHelper не был проинициализирован.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет отправителя в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -174,6 +238,33 @@ namespace Bank
         private void listPersonalAccounts_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnfreeze_Click(object sender, EventArgs e)
+        {
+            // Проверяем, что в DataGridView выбрана хотя бы одна строка
+            if (dataGridPA.SelectedRows.Count > 0)
+            {
+                // Получаем номер счета из выбранной строки
+                DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
+                int accountNumber = Convert.ToInt32(selectedRow.Cells["AccountNumber"].Value);
+
+                // Замораживаем счет с помощью вашей процедуры или функции
+                FreezeAccount(accountNumber);
+            }
+            else
+            {
+                MessageBox.Show("Выберите счет для заморозки.");
+            }
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+            // Обновление всей информации
+            LoadClientAccounts(ID_Klient);
+            LoadClientInformation();
+            LoadClientDeposits();
+            LoadClientCredits();
         }
     }
 }
