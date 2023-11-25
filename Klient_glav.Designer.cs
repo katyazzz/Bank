@@ -176,6 +176,7 @@ namespace Bank
             this.btnhistoryCredit.TabIndex = 13;
             this.btnhistoryCredit.Text = "История операций";
             this.btnhistoryCredit.UseVisualStyleBackColor = true;
+            this.btnhistoryCredit.Click += new System.EventHandler(this.btnhistoryCredit_Click);
             // 
             // tbFIOKlient
             // 
