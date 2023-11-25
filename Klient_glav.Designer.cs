@@ -55,6 +55,7 @@ namespace Bank
             // 
             // btntransfer
             // 
+            this.btntransfer.BackColor = System.Drawing.SystemColors.Info;
             this.btntransfer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btntransfer.Location = new System.Drawing.Point(692, 220);
             this.btntransfer.Margin = new System.Windows.Forms.Padding(2);
@@ -62,11 +63,12 @@ namespace Bank
             this.btntransfer.Size = new System.Drawing.Size(193, 28);
             this.btntransfer.TabIndex = 0;
             this.btntransfer.Text = "Выполнить перевод";
-            this.btntransfer.UseVisualStyleBackColor = true;
+            this.btntransfer.UseVisualStyleBackColor = false;
             this.btntransfer.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnhistoryPA
             // 
+            this.btnhistoryPA.BackColor = System.Drawing.SystemColors.MenuBar;
             this.btnhistoryPA.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryPA.Location = new System.Drawing.Point(692, 154);
             this.btnhistoryPA.Margin = new System.Windows.Forms.Padding(2);
@@ -74,7 +76,7 @@ namespace Bank
             this.btnhistoryPA.Size = new System.Drawing.Size(193, 28);
             this.btnhistoryPA.TabIndex = 1;
             this.btnhistoryPA.Text = "История операций";
-            this.btnhistoryPA.UseVisualStyleBackColor = true;
+            this.btnhistoryPA.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -206,12 +208,13 @@ namespace Bank
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Info;
             this.btnRefresh.Location = new System.Drawing.Point(597, 95);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(117, 23);
             this.btnRefresh.TabIndex = 18;
             this.btnRefresh.Text = "обновление";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
             // Klient_glav
