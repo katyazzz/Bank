@@ -30,6 +30,7 @@ namespace Bank
             LoadClientAccounts(ID_Klient);
             LoadClientDeposits();
             LoadClientCredits();
+            LoadClientInformation();
         }
 
         private void LoadClientAccounts(int ID_Klient)
@@ -123,6 +124,35 @@ namespace Bank
                 }
             }
         }
+
+        private void LoadClientInformation()
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Получение ФИО клиента из таблицы Klient
+                string query = "SELECT FIO FROM Klient WHERE ID_Klient = @ID_Klient";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID_Klient", this.ID_Klient);
+
+                    string fullName = command.ExecuteScalar() as string;
+
+                    if (!string.IsNullOrEmpty(fullName))
+                    {
+                        // Вывод ФИО в TextBox
+                        tbFIOKlient.Text = fullName;
+                    }
+                }
+            }
+        }
+
+
+
 
 
 
