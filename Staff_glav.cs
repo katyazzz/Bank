@@ -160,7 +160,7 @@ namespace Bank
             {
                 int selTransactNumber = -1;
                 // Получение номера выбранного счета
-                int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["AccountNumber"].Value;
+                int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["Номер счета"].Value;
 
                 // Создание новой формы для пополнения счета
                 DebFromAccountForm DebFromAccountForm = new DebFromAccountForm(selTransactNumber, selectedAccountNumber, db);
@@ -315,15 +315,19 @@ namespace Bank
         {
             int pasSeries = Convert.ToInt32(txtspas.Text);
             int pasNumber = Convert.ToInt32(txtnpas.Text);
+            // Получаем информацию о сотруднике
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
+
             // Проверка наличия выбранного счета в DataGridView
             if (dataGridPA.SelectedRows.Count > 0)
             {
-                int selTransactNumber = -1;
                 // Получение номера выбранного счета
                 int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["Номер счета"].Value;
 
                 // Создание новой формы для пополнения счета
-                RefillForm refillForm = new RefillForm(selTransactNumber,selectedAccountNumber, db);
+                RefillForm refillForm = new RefillForm(selectedAccountNumber, db, staffID);
 
                 // Показ формы для пополнения счета
                 refillForm.ShowDialog();

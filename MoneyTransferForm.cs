@@ -29,8 +29,6 @@ namespace Bank
 
             this.senderAccountNumber = senderAccountNumber;
 
-            //this.accountNumber = accountNumber;
-            //this.transactNumber = transactNumber;
             this.db = db;
            // this.ID_Staff = ID_Staff;
 
@@ -50,7 +48,8 @@ namespace Bank
                 // для счета отправителя и счета получателя соответственно
                 //int transactNumber = GetNextTransactNumber();  // Ваш метод для получения следующего номера транзакции
                 db.WithdrawMoney(transactNumber, senderAccountNumber, transferAmount, ID_Staff);
-                db.DepositMoney(transactNumber, recipientAccountNumber, transferAmount, ID_Staff);
+                //db.DepositMoney(transactNumber, recipientAccountNumber, transferAmount, ID_Staff);
+               // db.DepositMoney(accountNumber, amount, staffID);
 
                 // Ваш дополнительный код...
 

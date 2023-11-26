@@ -127,20 +127,17 @@ namespace Bank
             return newAccountNumber;
         }
 
-        public void DepositMoney(int transactNumber, int accountNumber, float amount, int ID_Staff)
-
+        public void DepositMoney(int accountNumber, float amount, int ID_Staff)
         {
-            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-           
+
                 using (SqlCommand depositMoneyCommand = new SqlCommand("DepositMoney", connection))
                 {
                     depositMoneyCommand.CommandType = CommandType.StoredProcedure;
 
-                    SqlParameter transactNumberParameter = depositMoneyCommand.Parameters.Add("@TransactNumber", SqlDbType.Int);
-                    transactNumberParameter.Value = transactNumber;
+                    // Параметр @TransactNumber больше не нужен, так как он генерируется внутри хранимой процедуры
 
                     // Добавляем параметр для номера счета
                     SqlParameter accountNumberParameter = depositMoneyCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
@@ -159,6 +156,7 @@ namespace Bank
                 }
             }
         }
+
 
         public void WithdrawMoney(int transactNumber, int accountNumber, float amount, int ID_Staff)
         {

@@ -23,13 +23,14 @@ namespace Bank
         private int ID_Staff;
 
 
-        public RefillForm(int transactNumber, int accountNumber, DatabaseHelper db)
+        public RefillForm(int accountNumber, DatabaseHelper db, int ID_Staff)
         {
             InitializeComponent();
 
             this.accountNumber = accountNumber;
-            this.transactNumber = transactNumber;
             this.db = db;
+            this.ID_Staff = ID_Staff;
+     
         }
 
 
@@ -47,12 +48,12 @@ namespace Bank
                 // Получаем информацию о сотруднике
                 (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
 
-                int staffID = staffInfo.Item1; 
+                int staffID = staffInfo.Item1;
 
                 // Вызов процедуры для пополнения счета
-                db.DepositMoney(transactNumber, accountNumber, amount, staffID);
-
+                db.DepositMoney(accountNumber, amount, staffID);
                 // Закрываем форму пополнения после успешного выполнения операции
+                MessageBox.Show("Счет успешно пополнен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -60,5 +61,7 @@ namespace Bank
                 MessageBox.Show("Введите корректную сумму для пополнения.");
             }
         }
+   
+
     }
 }
