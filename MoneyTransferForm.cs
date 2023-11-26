@@ -23,6 +23,7 @@ namespace Bank
        // private int accountNumber;
         private int transactNumber;
 
+        int staffID = 1000;
         public MoneyTransferForm(int senderAccountNumber,  DatabaseHelper db)
         {
             InitializeComponent();

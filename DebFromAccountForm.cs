@@ -25,7 +25,7 @@ namespace Bank
         private int transactNumber;
         private DatabaseHelper db;
         private int ID_Staff;
-
+        int staffID = 1000;
         public DebFromAccountForm(int transactNumber, int accountNumber, DatabaseHelper db)
         {
             InitializeComponent();
@@ -43,6 +43,7 @@ namespace Bank
                 (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
 
                 int staffID = staffInfo.Item1;
+                //int staffID = 1000;
 
                 db.WithdrawMoney(transactNumber, accountNumber, amount, ID_Staff);
 

@@ -206,6 +206,8 @@ namespace Bank
                 DataGridViewRow selectedRow = dataGridPA.SelectedRows[0];
                 int senderAccountNumber = Convert.ToInt32(selectedRow.Cells["AccountNumber"].Value);
 
+                int staffID = 1000;
+
                 // Проверяем, что db не null
                 if (db != null)
                 {

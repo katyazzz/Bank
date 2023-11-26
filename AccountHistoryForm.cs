@@ -13,7 +13,7 @@ namespace Bank
 {
     public partial class AccountHistoryForm : Form
     {
-        private DataGridView dataGridHistory;
+        //private DataGridView dataGridHistory;
         private int ID_Klient;
         private DatabaseHelper db;
 
