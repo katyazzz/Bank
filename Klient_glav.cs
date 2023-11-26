@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bank.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -265,6 +266,8 @@ namespace Bank
             LoadClientInformation();
             LoadClientDeposits();
             LoadClientCredits();
+
+       
         }
 
         private void btnhistoryPA_Click(object sender, EventArgs e)

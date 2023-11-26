@@ -32,6 +32,7 @@ namespace Bank
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Klient_glav));
             this.btntransfer = new System.Windows.Forms.Button();
             this.btnhistoryPA = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,7 +131,7 @@ namespace Bank
             this.btnfreeze.Name = "btnfreeze";
             this.btnfreeze.Size = new System.Drawing.Size(193, 28);
             this.btnfreeze.TabIndex = 9;
-            this.btnfreeze.Text = "заблокировать счет";
+            this.btnfreeze.Text = "Заблокировать счет";
             this.btnfreeze.UseVisualStyleBackColor = false;
             this.btnfreeze.Click += new System.EventHandler(this.btnfreeze_Click);
             // 
@@ -214,11 +215,11 @@ namespace Bank
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(597, 95);
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(692, 102);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(117, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(36, 32);
             this.btnRefresh.TabIndex = 18;
-            this.btnRefresh.Text = "обновление";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click_1);
             // 
