@@ -37,6 +37,11 @@ namespace Bank
 
         private void btnDebFromAccount_Click_1(object sender, EventArgs e)
         {
+
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
+
             if (float.TryParse(txtAmountDeb.Text, out float amount))
             {
                 // Получаем текущий баланс счета

@@ -42,6 +42,10 @@ namespace Bank
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
+
             // Получаем введенные данные из TextBox'ов
             if (int.TryParse(txtRecipientAccount.Text, out int recipientAccountNumber) &&
                 float.TryParse(txtAmount.Text, out float transferAmount))

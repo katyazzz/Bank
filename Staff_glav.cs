@@ -443,6 +443,11 @@ namespace Bank
 
         private void TransferMoneybtn_Click(object sender, EventArgs e)
         {
+            // Получаем информацию о сотруднике
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
+
             // Проверяем, выбрана ли хотя бы одна строка в дата-гриде
             if (dataGridPA.SelectedRows.Count > 0)
             {
