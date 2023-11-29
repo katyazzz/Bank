@@ -137,28 +137,22 @@ namespace Bank
                 {
                     depositMoneyCommand.CommandType = CommandType.StoredProcedure;
 
-                    // Параметр @TransactNumber больше не нужен, так как он генерируется внутри хранимой процедуры
-
-                    // Добавляем параметр для номера счета
                     SqlParameter accountNumberParameter = depositMoneyCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
                     accountNumberParameter.Value = accountNumber;
 
-                    // Добавляем параметр для суммы пополнения
                     SqlParameter amountParameter = depositMoneyCommand.Parameters.Add("@Amount", SqlDbType.Float);
                     amountParameter.Value = amount;
 
-                    // Добавляем параметр для ID сотрудника
                     SqlParameter idStaffParameter = depositMoneyCommand.Parameters.Add("@ID_Staff", SqlDbType.Int);
                     idStaffParameter.Value = ID_Staff;
 
-                    // Выполняем хранимую процедуру
                     depositMoneyCommand.ExecuteNonQuery();
                 }
             }
         }
 
 
-        public void WithdrawMoney(int transactNumber, int accountNumber, float amount, int ID_Staff)
+        public void WithdrawMoney( int accountNumber, float amount, int ID_Staff)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -168,27 +162,16 @@ namespace Bank
                 {
                     withdrawMoneyCommand.CommandType = CommandType.StoredProcedure;
 
-                    SqlParameter transactNumberParameter = withdrawMoneyCommand.Parameters.Add("@TransactNumber", SqlDbType.Int);
-                    transactNumberParameter.Value = transactNumber;
-
-                    // Добавляем параметр для номера счета
                     SqlParameter accountNumberParameter = withdrawMoneyCommand.Parameters.Add("@AccountNumber", SqlDbType.Int);
                     accountNumberParameter.Value = accountNumber;
 
-                    // Добавляем параметр для суммы списания
                     SqlParameter amountParameter = withdrawMoneyCommand.Parameters.Add("@Amount", SqlDbType.Float);
                     amountParameter.Value = amount;
 
-                    // Добавляем параметр для ID сотрудника
                     SqlParameter idStaffParameter = withdrawMoneyCommand.Parameters.Add("@ID_Staff", SqlDbType.Int);
                     idStaffParameter.Value = ID_Staff;
 
-                   
-
-                    // Выполняем хранимую процедуру
                     withdrawMoneyCommand.ExecuteNonQuery();
-
-                    //Console.WriteLine($"Транзакция {transactNumber} завершена успешно.");
                 }
             }
         }

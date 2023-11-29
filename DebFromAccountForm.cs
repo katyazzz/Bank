@@ -39,19 +39,23 @@ namespace Bank
         {
             if (float.TryParse(txtAmountDeb.Text, out float amount))
             {
-                // Получаем информацию о сотруднике
-                (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+                // Получаем текущий баланс счета
+                float currentBalance = db.GetAccountBalance(accountNumber);
 
-                int staffID = staffInfo.Item1;
-                //int staffID = 1000;
-
-                db.WithdrawMoney(transactNumber, accountNumber, amount, ID_Staff);
-
-                this.Close();
+                if (currentBalance >= amount)
+                {
+                    // Выполняем списание средств
+                    db.WithdrawMoney( accountNumber, amount, ID_Staff);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("На счете недостаточно средств для выполнения списания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Пожалуйста, введите корректную сумму.");
+                MessageBox.Show("Пожалуйста, введите корректную сумму.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

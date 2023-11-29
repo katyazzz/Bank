@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,19 +46,42 @@ namespace Bank
             if (int.TryParse(txtRecipientAccount.Text, out int recipientAccountNumber) &&
                 float.TryParse(txtAmount.Text, out float transferAmount))
             {
-                // Вызываем методы DepositMoney и WithdrawMoney из объекта db
-                // для счета отправителя и счета получателя соответственно
-                //int transactNumber = GetNextTransactNumber();  // Ваш метод для получения следующего номера транзакции
-                db.WithdrawMoney(transactNumber, senderAccountNumber, transferAmount, ID_Staff);
-                //db.DepositMoney(transactNumber, recipientAccountNumber, transferAmount, ID_Staff);
-               // db.DepositMoney(accountNumber, amount, staffID);
+                try
+                {
+                    // Попытка выполнить списание средств с первого счета
+                    db.WithdrawMoney(senderAccountNumber, transferAmount, ID_Staff);
 
-                // Ваш дополнительный код...
+                    // Если списание прошло успешно, пытаемся выполнить пополнение на втором счете
+                    db.DepositMoney(recipientAccountNumber, transferAmount, ID_Staff);
 
-                MessageBox.Show("Перевод выполнен успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Если все успешно, выводим сообщение об успешном переводе
+                    MessageBox.Show("Перевод выполнен успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Закрываем форму после успешного выполнения операции
-                this.Close();
+                    // Закрываем форму после успешного выполнения операции
+                    this.Close();
+                }
+                catch (SqlException ex)
+                {
+                    // Обработка ошибок SQL
+                    if (ex.Number == 50001)
+                    {
+                        MessageBox.Show("Ошибка: статус счета не открыт.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (ex.Number == 50002)
+                    {
+                        MessageBox.Show("Ошибка: недостаточно средств на счете.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        // Другие ошибки SQL
+                        MessageBox.Show($"SQL Error: {ex.Number} - {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Обработка других исключений
+                    MessageBox.Show($"Error: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
