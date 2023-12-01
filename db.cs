@@ -291,6 +291,27 @@ namespace Bank
             return balance;
         }
 
+        public void ChangePassword(int staffID, string oldPassword, string newPassword)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("ChangePassword", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@ID_Staff", staffID);
+                    command.Parameters.AddWithValue("@OldPassword", oldPassword);
+                    command.Parameters.AddWithValue("@NewPassword", newPassword);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
 
 
     }

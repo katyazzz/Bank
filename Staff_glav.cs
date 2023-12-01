@@ -524,21 +524,35 @@ namespace Bank
                         }
                         db.CloseAccount(accountNumber);
                     }
-                    // Показываем сообщение об успешном закрытии счета
-                   // MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                 }
 
-                // Закрываем счет (в данном случае, без проверки баланса)
-               // db.CloseAccount(accountNumber);
-
-                // Обновляем данные в дата-гриде или в других компонентах, если это необходимо
-
-               // MessageBox.Show("Счет закрыт успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             else
             {
                 MessageBox.Show("Выберите счет для закрытия в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void ChangePasswordButton_Click(object sender, EventArgs e)
+        {
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
+
+            // Проверка наличия ID сотрудника
+            if (staffID == -1)
+            {
+                MessageBox.Show("Не удалось получить информацию о сотруднике.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ChangePasswordForm changePasswordForm = new ChangePasswordForm(staffID, db);
+
+            // Отображение формы
+            changePasswordForm.ShowDialog();
+
         }
     }
 }
