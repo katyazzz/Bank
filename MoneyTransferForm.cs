@@ -25,14 +25,14 @@ namespace Bank
         private int transactNumber;
 
         int staffID = 1000;
-        public MoneyTransferForm(int senderAccountNumber,  DatabaseHelper db)
+        public MoneyTransferForm(int senderAccountNumber,  DatabaseHelper db, int ID_Staff)
         {
             InitializeComponent();
 
             this.senderAccountNumber = senderAccountNumber;
 
             this.db = db;
-           // this.ID_Staff = ID_Staff;
+            this.ID_Staff = ID_Staff;
 
         }
         // Добавим метод, который будет возвращать номер счета отправителя

@@ -199,6 +199,7 @@ namespace Bank
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             // Проверяем, выбрана ли хотя бы одна строка в дата-гриде
             if (dataGridPA.SelectedRows.Count > 0)
             {
@@ -212,7 +213,7 @@ namespace Bank
                 if (db != null)
                 {
                     // Создаем форму MoneyTransferForm, передавая информацию о счете отправителя и экземпляр db
-                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm(senderAccountNumber, db);
+                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm(senderAccountNumber, db, staffID);
 
                     // Отображаем форму
                     moneyTransferForm.ShowDialog();

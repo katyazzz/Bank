@@ -155,6 +155,10 @@ namespace Bank
 
             int pasSeries = Convert.ToInt32(txtspas.Text);
             int pasNumber = Convert.ToInt32(txtnpas.Text);
+            // Получаем информацию о сотруднике
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            int staffID = staffInfo.Item1;
             // Проверка наличия выбранного счета в DataGridView
             if (dataGridPA.SelectedRows.Count > 0)
             {
@@ -163,7 +167,7 @@ namespace Bank
                 int selectedAccountNumber = (int)dataGridPA.SelectedRows[0].Cells["Номер счета"].Value;
 
                 // Создание новой формы для пополнения счета
-                DebFromAccountForm DebFromAccountForm = new DebFromAccountForm(selTransactNumber, selectedAccountNumber, db);
+                DebFromAccountForm DebFromAccountForm = new DebFromAccountForm(selTransactNumber, selectedAccountNumber, db, staffID);
 
                 // Показ формы для пополнения счета
                 DebFromAccountForm.ShowDialog();
@@ -459,7 +463,7 @@ namespace Bank
                 if (db != null)
                 {
                     // Создаем форму MoneyTransferForm, передавая информацию о счете отправителя и экземпляр db
-                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm  (senderAccountNumber, db);
+                    MoneyTransferForm moneyTransferForm = new MoneyTransferForm  (senderAccountNumber, db, staffID);
 
                     // Отображаем форму
                     moneyTransferForm.ShowDialog();
@@ -485,6 +489,10 @@ namespace Bank
                 float accountBalance = Convert.ToSingle(selectedRow.Cells["Баланс"].Value);
 
                 string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+                // Получаем информацию о сотруднике
+                (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+                int staffID = staffInfo.Item1;
 
                 // Проверяем баланс счета
                 if (accountBalance > 0)
@@ -495,7 +503,7 @@ namespace Bank
                     if (result == DialogResult.Yes)
                     {
                         // Создаем форму для перевода денег
-                        MoneyTransferForm moneyTransferForm = new MoneyTransferForm(accountNumber, db);
+                        MoneyTransferForm moneyTransferForm = new MoneyTransferForm(accountNumber, db, staffID);
 
                         moneyTransferForm.ShowDialog();
                     }

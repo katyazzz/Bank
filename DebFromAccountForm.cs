@@ -26,12 +26,13 @@ namespace Bank
         private DatabaseHelper db;
         private int ID_Staff;
         int staffID = 1000;
-        public DebFromAccountForm(int transactNumber, int accountNumber, DatabaseHelper db)
+        public DebFromAccountForm(int transactNumber, int accountNumber, DatabaseHelper db, int ID_Staff)
         {
             InitializeComponent();
             this.accountNumber = accountNumber;
             this.transactNumber = transactNumber;
             this.db = db;
+            this.ID_Staff = ID_Staff;
         }
 
 
