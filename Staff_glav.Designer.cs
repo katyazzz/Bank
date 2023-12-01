@@ -471,13 +471,14 @@
             // 
             // ChangePasswordButton
             // 
+            this.ChangePasswordButton.BackColor = System.Drawing.SystemColors.Info;
             this.ChangePasswordButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChangePasswordButton.Location = new System.Drawing.Point(1002, 72);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(134, 23);
             this.ChangePasswordButton.TabIndex = 31;
             this.ChangePasswordButton.Text = "сменить пароль";
-            this.ChangePasswordButton.UseVisualStyleBackColor = true;
+            this.ChangePasswordButton.UseVisualStyleBackColor = false;
             this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
             // 
             // button8
