@@ -116,9 +116,10 @@ namespace Bank
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(810, 17);
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(776, 17);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 30);
+            this.button3.Size = new System.Drawing.Size(153, 30);
             this.button3.TabIndex = 8;
             this.button3.Text = "поменять пароль";
             this.button3.UseVisualStyleBackColor = true;
@@ -148,9 +149,11 @@ namespace Bank
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Info;
-            this.button5.Location = new System.Drawing.Point(810, 53);
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(776, 53);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 30);
+            this.button5.Size = new System.Drawing.Size(153, 30);
             this.button5.TabIndex = 11;
             this.button5.Text = "выйти";
             this.button5.UseVisualStyleBackColor = false;

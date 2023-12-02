@@ -35,7 +35,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtnpas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridPA = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,7 +65,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.ChangePasswordButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
@@ -84,7 +83,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label1.BackColor = System.Drawing.Color.FloralWhite;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(21, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -96,8 +96,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(539, 20);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -109,8 +113,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Location = new System.Drawing.Point(352, 20);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
@@ -132,7 +140,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label2.BackColor = System.Drawing.Color.FloralWhite;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(176, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -140,18 +149,6 @@
             this.label2.Size = new System.Drawing.Size(139, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Номер паспорта";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1232, 107);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // dataGridPA
             // 
@@ -168,44 +165,48 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(24, 166);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 14);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Счета";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(24, 294);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 14);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Вклады";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(25, 443);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 14);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Кредиты";
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(343, 160);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(360, 160);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 27);
+            this.button3.Size = new System.Drawing.Size(174, 27);
             this.button3.TabIndex = 11;
             this.button3.Text = "открыть новый счет";
             this.button3.UseVisualStyleBackColor = false;
@@ -235,12 +236,16 @@
             // 
             // new_dep
             // 
-            this.new_dep.BackColor = System.Drawing.SystemColors.Info;
+            this.new_dep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.new_dep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.new_dep.FlatAppearance.BorderSize = 0;
+            this.new_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.new_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.new_dep.Location = new System.Drawing.Point(343, 294);
+            this.new_dep.ForeColor = System.Drawing.Color.White;
+            this.new_dep.Location = new System.Drawing.Point(360, 294);
             this.new_dep.Margin = new System.Windows.Forms.Padding(2);
             this.new_dep.Name = "new_dep";
-            this.new_dep.Size = new System.Drawing.Size(172, 25);
+            this.new_dep.Size = new System.Drawing.Size(174, 25);
             this.new_dep.TabIndex = 14;
             this.new_dep.Text = "открыть новый вклад";
             this.new_dep.UseVisualStyleBackColor = false;
@@ -248,12 +253,16 @@
             // 
             // new_credit
             // 
-            this.new_credit.BackColor = System.Drawing.SystemColors.Info;
+            this.new_credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.new_credit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.new_credit.FlatAppearance.BorderSize = 0;
+            this.new_credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.new_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.new_credit.Location = new System.Drawing.Point(343, 437);
+            this.new_credit.ForeColor = System.Drawing.Color.White;
+            this.new_credit.Location = new System.Drawing.Point(360, 437);
             this.new_credit.Margin = new System.Windows.Forms.Padding(2);
             this.new_credit.Name = "new_credit";
-            this.new_credit.Size = new System.Drawing.Size(172, 25);
+            this.new_credit.Size = new System.Drawing.Size(174, 25);
             this.new_credit.TabIndex = 15;
             this.new_credit.Text = "открыть новый кредит";
             this.new_credit.UseVisualStyleBackColor = false;
@@ -261,8 +270,12 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Info;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(845, 189);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
@@ -274,8 +287,12 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.Info;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(845, 220);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
@@ -287,8 +304,12 @@
             // 
             // TransferMoneybtn
             // 
-            this.TransferMoneybtn.BackColor = System.Drawing.SystemColors.Info;
+            this.TransferMoneybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.TransferMoneybtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransferMoneybtn.FlatAppearance.BorderSize = 0;
+            this.TransferMoneybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferMoneybtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TransferMoneybtn.ForeColor = System.Drawing.Color.White;
             this.TransferMoneybtn.Location = new System.Drawing.Point(845, 251);
             this.TransferMoneybtn.Margin = new System.Windows.Forms.Padding(2);
             this.TransferMoneybtn.Name = "TransferMoneybtn";
@@ -324,8 +345,12 @@
             // 
             // frozebtn
             // 
-            this.frozebtn.BackColor = System.Drawing.SystemColors.Info;
+            this.frozebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.frozebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.frozebtn.FlatAppearance.BorderSize = 0;
+            this.frozebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.frozebtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.frozebtn.ForeColor = System.Drawing.Color.White;
             this.frozebtn.Location = new System.Drawing.Point(970, 203);
             this.frozebtn.Margin = new System.Windows.Forms.Padding(2);
             this.frozebtn.Name = "frozebtn";
@@ -337,12 +362,16 @@
             // 
             // history_credit
             // 
-            this.history_credit.BackColor = System.Drawing.SystemColors.Info;
+            this.history_credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.history_credit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.history_credit.FlatAppearance.BorderSize = 0;
+            this.history_credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_credit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.history_credit.Location = new System.Drawing.Point(89, 437);
+            this.history_credit.ForeColor = System.Drawing.Color.White;
+            this.history_credit.Location = new System.Drawing.Point(106, 437);
             this.history_credit.Margin = new System.Windows.Forms.Padding(2);
             this.history_credit.Name = "history_credit";
-            this.history_credit.Size = new System.Drawing.Size(238, 26);
+            this.history_credit.Size = new System.Drawing.Size(240, 26);
             this.history_credit.TabIndex = 20;
             this.history_credit.Text = "показать историю погашения";
             this.history_credit.UseVisualStyleBackColor = false;
@@ -359,12 +388,16 @@
             // 
             // history_trans
             // 
-            this.history_trans.BackColor = System.Drawing.SystemColors.Info;
+            this.history_trans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.history_trans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.history_trans.FlatAppearance.BorderSize = 0;
+            this.history_trans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_trans.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.history_trans.Location = new System.Drawing.Point(89, 160);
+            this.history_trans.ForeColor = System.Drawing.Color.White;
+            this.history_trans.Location = new System.Drawing.Point(106, 160);
             this.history_trans.Margin = new System.Windows.Forms.Padding(2);
             this.history_trans.Name = "history_trans";
-            this.history_trans.Size = new System.Drawing.Size(216, 26);
+            this.history_trans.Size = new System.Drawing.Size(218, 26);
             this.history_trans.TabIndex = 21;
             this.history_trans.Text = "показать историю по счету";
             this.history_trans.UseVisualStyleBackColor = false;
@@ -372,12 +405,16 @@
             // 
             // history_dep
             // 
-            this.history_dep.BackColor = System.Drawing.SystemColors.Info;
+            this.history_dep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.history_dep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.history_dep.FlatAppearance.BorderSize = 0;
+            this.history_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_dep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.history_dep.Location = new System.Drawing.Point(89, 294);
+            this.history_dep.ForeColor = System.Drawing.Color.White;
+            this.history_dep.Location = new System.Drawing.Point(106, 294);
             this.history_dep.Margin = new System.Windows.Forms.Padding(2);
             this.history_dep.Name = "history_dep";
-            this.history_dep.Size = new System.Drawing.Size(238, 25);
+            this.history_dep.Size = new System.Drawing.Size(240, 25);
             this.history_dep.TabIndex = 22;
             this.history_dep.Text = "показать историю выплат";
             this.history_dep.UseVisualStyleBackColor = false;
@@ -385,8 +422,12 @@
             // 
             // CreateStaff
             // 
-            this.CreateStaff.BackColor = System.Drawing.SystemColors.Info;
+            this.CreateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.CreateStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateStaff.FlatAppearance.BorderSize = 0;
+            this.CreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateStaff.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateStaff.ForeColor = System.Drawing.Color.Transparent;
             this.CreateStaff.Location = new System.Drawing.Point(701, 20);
             this.CreateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.CreateStaff.Name = "CreateStaff";
@@ -418,9 +459,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label7.BackColor = System.Drawing.Color.FloralWhite;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(902, 23);
+            this.label7.Location = new System.Drawing.Point(902, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 17);
             this.label7.TabIndex = 26;
@@ -446,11 +488,15 @@
             // 
             // closebtn
             // 
-            this.closebtn.BackColor = System.Drawing.SystemColors.Info;
+            this.closebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closebtn.FlatAppearance.BorderSize = 0;
+            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closebtn.Location = new System.Drawing.Point(545, 160);
+            this.closebtn.ForeColor = System.Drawing.Color.White;
+            this.closebtn.Location = new System.Drawing.Point(562, 160);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(151, 26);
+            this.closebtn.Size = new System.Drawing.Size(153, 26);
             this.closebtn.TabIndex = 29;
             this.closebtn.Text = "закрыть счет";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -458,8 +504,12 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Info;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(970, 233);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
@@ -471,8 +521,12 @@
             // 
             // ChangePasswordButton
             // 
-            this.ChangePasswordButton.BackColor = System.Drawing.SystemColors.Info;
+            this.ChangePasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.ChangePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChangePasswordButton.FlatAppearance.BorderSize = 0;
+            this.ChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ChangePasswordButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChangePasswordButton.ForeColor = System.Drawing.Color.White;
             this.ChangePasswordButton.Location = new System.Drawing.Point(1002, 72);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(134, 23);
@@ -483,8 +537,12 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.BackColor = System.Drawing.SystemColors.Info;
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
             this.ExitButton.Location = new System.Drawing.Point(1142, 72);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
@@ -493,11 +551,25 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FloralWhite;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(902, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 17);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Должность";
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 620);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(1231, 620);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ChangePasswordButton);
             this.Controls.Add(this.button5);
@@ -530,12 +602,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtspas);
-            this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Staff_glav";
             this.Text = "Главная(Сотрудник)";
             this.Load += new System.EventHandler(this.Staff_glav_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).EndInit();
@@ -552,7 +623,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtnpas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridPA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -583,5 +653,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button ChangePasswordButton;
         private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label label8;
     }
 }
