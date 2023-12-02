@@ -74,26 +74,29 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(71, 160);
+            this.button1.Location = new System.Drawing.Point(34, 160);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 26);
+            this.button1.Size = new System.Drawing.Size(170, 34);
             this.button1.TabIndex = 4;
             this.button1.Text = "сменить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // changePasswordForm
+            // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 238);
+            this.ClientSize = new System.Drawing.Size(272, 238);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NewPasswordTextBox);
             this.Controls.Add(this.OldPasswordTextBox);
-            this.Name = "changePasswordForm";
+            this.Name = "ChangePasswordForm";
             this.Text = "changePasswordForm";
             this.Load += new System.EventHandler(this.changePasswordForm_Load);
             this.ResumeLayout(false);

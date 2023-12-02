@@ -329,5 +329,19 @@ namespace Bank
             // Отображение новой формы
             loginForm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (ID_Klient > 0)
+            {
+                ChangeClientPasswordForm changeClientPasswordForm = new ChangeClientPasswordForm(ID_Klient, db);
+                changeClientPasswordForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Не удалось определить текущего клиента.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

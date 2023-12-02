@@ -75,6 +75,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ChangeClientPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeClientPasswordForm.Designer.cs">
+      <DependentUpon>ChangeClientPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </Compile>
     <EmbeddedResource Include="AccountHistoryForm.resx">
       <DependentUpon>AccountHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeClientPasswordForm.resx">
+      <DependentUpon>ChangeClientPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>

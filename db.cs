@@ -310,6 +310,24 @@ namespace Bank
             }
         }
 
+        public void ChangeClientPassword(int clientID, string oldPassword, string newPassword)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("ChangeClientPassword", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@ClientID", clientID);
+                    command.Parameters.AddWithValue("@OldPassword", oldPassword);
+                    command.Parameters.AddWithValue("@NewPassword", newPassword);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
 
 
