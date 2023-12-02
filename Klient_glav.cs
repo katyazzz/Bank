@@ -317,5 +317,17 @@ namespace Bank
                 MessageBox.Show("Выберите клиента для просмотра истории операций.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Закрытие текущей формы
+            this.Close();
+
+            // Создание новой формы для ввода пароля
+            Form1 loginForm = new Form1();
+
+            // Отображение новой формы
+            loginForm.Show();
+        }
     }
 }
