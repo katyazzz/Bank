@@ -483,13 +483,14 @@
             // 
             // ExitButton
             // 
+            this.ExitButton.BackColor = System.Drawing.SystemColors.Info;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.Location = new System.Drawing.Point(1142, 72);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 32;
             this.ExitButton.Text = "выйти";
-            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // Staff_glav
