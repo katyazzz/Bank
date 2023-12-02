@@ -43,7 +43,6 @@ namespace Bank
             // Получение старого и нового паролей из TextBox'ов
             string oldPassword = OldPasswordTextBox.Text;
             string newPassword = NewPasswordTextBox.Text;
-
             try
             {
                 db.ChangePassword(staffID, oldPassword, newPassword);
