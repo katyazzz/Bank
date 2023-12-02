@@ -62,7 +62,7 @@ namespace Bank
             this.btntransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntransfer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btntransfer.ForeColor = System.Drawing.Color.White;
-            this.btntransfer.Location = new System.Drawing.Point(807, 248);
+            this.btntransfer.Location = new System.Drawing.Point(627, 249);
             this.btntransfer.Margin = new System.Windows.Forms.Padding(2);
             this.btntransfer.Name = "btntransfer";
             this.btntransfer.Size = new System.Drawing.Size(225, 42);
@@ -79,7 +79,7 @@ namespace Bank
             this.btnhistoryPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnhistoryPA.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryPA.ForeColor = System.Drawing.Color.White;
-            this.btnhistoryPA.Location = new System.Drawing.Point(807, 154);
+            this.btnhistoryPA.Location = new System.Drawing.Point(627, 154);
             this.btnhistoryPA.Margin = new System.Windows.Forms.Padding(2);
             this.btnhistoryPA.Name = "btnhistoryPA";
             this.btnhistoryPA.Size = new System.Drawing.Size(225, 42);
@@ -124,15 +124,19 @@ namespace Bank
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(905, 17);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 30);
             this.button3.TabIndex = 8;
             this.button3.Text = "поменять пароль";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnfreeze
@@ -143,7 +147,7 @@ namespace Bank
             this.btnfreeze.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnfreeze.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnfreeze.ForeColor = System.Drawing.Color.White;
-            this.btnfreeze.Location = new System.Drawing.Point(807, 201);
+            this.btnfreeze.Location = new System.Drawing.Point(627, 201);
             this.btnfreeze.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnfreeze.Name = "btnfreeze";
             this.btnfreeze.Size = new System.Drawing.Size(225, 42);
@@ -168,7 +172,7 @@ namespace Bank
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(905, 53);
@@ -188,7 +192,7 @@ namespace Bank
             this.btnhistoryDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnhistoryDeposit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryDeposit.ForeColor = System.Drawing.Color.White;
-            this.btnhistoryDeposit.Location = new System.Drawing.Point(807, 321);
+            this.btnhistoryDeposit.Location = new System.Drawing.Point(627, 321);
             this.btnhistoryDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.btnhistoryDeposit.Name = "btnhistoryDeposit";
             this.btnhistoryDeposit.Size = new System.Drawing.Size(225, 42);
@@ -205,7 +209,7 @@ namespace Bank
             this.btnhistoryCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnhistoryCredit.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnhistoryCredit.ForeColor = System.Drawing.Color.White;
-            this.btnhistoryCredit.Location = new System.Drawing.Point(807, 490);
+            this.btnhistoryCredit.Location = new System.Drawing.Point(627, 490);
             this.btnhistoryCredit.Margin = new System.Windows.Forms.Padding(2);
             this.btnhistoryCredit.Name = "btnhistoryCredit";
             this.btnhistoryCredit.Size = new System.Drawing.Size(225, 42);
@@ -229,7 +233,7 @@ namespace Bank
             this.dataGridPA.Location = new System.Drawing.Point(37, 154);
             this.dataGridPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridPA.Name = "dataGridPA";
-            this.dataGridPA.Size = new System.Drawing.Size(747, 137);
+            this.dataGridPA.Size = new System.Drawing.Size(563, 137);
             this.dataGridPA.TabIndex = 15;
             // 
             // dataGridDep
@@ -238,7 +242,7 @@ namespace Bank
             this.dataGridDep.Location = new System.Drawing.Point(37, 321);
             this.dataGridDep.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridDep.Name = "dataGridDep";
-            this.dataGridDep.Size = new System.Drawing.Size(747, 126);
+            this.dataGridDep.Size = new System.Drawing.Size(563, 126);
             this.dataGridDep.TabIndex = 16;
             // 
             // dataGridCredit
@@ -247,7 +251,7 @@ namespace Bank
             this.dataGridCredit.Location = new System.Drawing.Point(37, 490);
             this.dataGridCredit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridCredit.Name = "dataGridCredit";
-            this.dataGridCredit.Size = new System.Drawing.Size(747, 105);
+            this.dataGridCredit.Size = new System.Drawing.Size(563, 105);
             this.dataGridCredit.TabIndex = 17;
             // 
             // btnRefresh
@@ -257,7 +261,7 @@ namespace Bank
             this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(807, 102);
+            this.btnRefresh.Location = new System.Drawing.Point(627, 102);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(42, 32);
