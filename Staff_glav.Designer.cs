@@ -65,7 +65,7 @@
             this.closebtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.ChangePasswordButton = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
@@ -481,22 +481,23 @@
             this.ChangePasswordButton.UseVisualStyleBackColor = false;
             this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
             // 
-            // button8
+            // ExitButton
             // 
-            this.button8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(1142, 72);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "выйти";
-            this.button8.UseVisualStyleBackColor = true;
+            this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Location = new System.Drawing.Point(1142, 72);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 32;
+            this.ExitButton.Text = "выйти";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 620);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ChangePasswordButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.closebtn);
@@ -580,6 +581,6 @@
         private System.Windows.Forms.Button closebtn;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button ChangePasswordButton;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

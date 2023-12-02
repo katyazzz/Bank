@@ -554,5 +554,17 @@ namespace Bank
             changePasswordForm.ShowDialog();
 
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            // Закрытие текущей формы
+            this.Close();
+
+            // Создание новой формы для ввода пароля
+            EntStaf loginForm = new EntStaf();
+
+            // Отображение новой формы
+            loginForm.Show();
+        }
     }
 }
