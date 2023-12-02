@@ -526,7 +526,7 @@
             this.ChangePasswordButton.FlatAppearance.BorderSize = 0;
             this.ChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ChangePasswordButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangePasswordButton.ForeColor = System.Drawing.Color.White;
+            this.ChangePasswordButton.ForeColor = System.Drawing.Color.Black;
             this.ChangePasswordButton.Location = new System.Drawing.Point(1002, 72);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(134, 23);
@@ -542,7 +542,7 @@
             this.ExitButton.FlatAppearance.BorderSize = 0;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.ForeColor = System.Drawing.Color.Black;
             this.ExitButton.Location = new System.Drawing.Point(1142, 72);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
