@@ -295,7 +295,6 @@ namespace Bank
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Klient_glav";
             this.Text = "Главная (Клиент)";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Klient_glav_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).EndInit();

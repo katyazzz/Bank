@@ -59,6 +59,8 @@
             this.ClientSize = new System.Drawing.Size(666, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridHis);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DepositPaymentsHistoryKlientForm";
             this.Text = "DepositPaymentsHistoryKlientForm";
             this.Load += new System.EventHandler(this.DepositPaymentsHistoryKlientForm_Load);
