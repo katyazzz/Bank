@@ -53,7 +53,7 @@
             // 
             this.txtfio.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtfio.Location = new System.Drawing.Point(47, 39);
-            this.txtfio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtfio.Margin = new System.Windows.Forms.Padding(2);
             this.txtfio.Name = "txtfio";
             this.txtfio.Size = new System.Drawing.Size(174, 24);
             this.txtfio.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             this.txtspas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtspas.Location = new System.Drawing.Point(47, 87);
-            this.txtspas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtspas.Margin = new System.Windows.Forms.Padding(2);
             this.txtspas.Name = "txtspas";
             this.txtspas.Size = new System.Drawing.Size(174, 24);
             this.txtspas.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.txtnpas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtnpas.Location = new System.Drawing.Point(243, 87);
-            this.txtnpas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnpas.Margin = new System.Windows.Forms.Padding(2);
             this.txtnpas.Name = "txtnpas";
             this.txtnpas.Size = new System.Drawing.Size(154, 24);
             this.txtnpas.TabIndex = 3;
@@ -115,7 +115,7 @@
             // 
             this.txtbd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtbd.Location = new System.Drawing.Point(47, 140);
-            this.txtbd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtbd.Margin = new System.Windows.Forms.Padding(2);
             this.txtbd.Name = "txtbd";
             this.txtbd.Size = new System.Drawing.Size(151, 24);
             this.txtbd.TabIndex = 6;
@@ -137,7 +137,7 @@
             this.txtsex.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtsex.FormattingEnabled = true;
             this.txtsex.Location = new System.Drawing.Point(47, 192);
-            this.txtsex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtsex.Margin = new System.Windows.Forms.Padding(2);
             this.txtsex.Name = "txtsex";
             this.txtsex.Size = new System.Drawing.Size(92, 25);
             this.txtsex.TabIndex = 8;
@@ -155,14 +155,17 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(47, 231);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 28);
             this.button1.TabIndex = 10;
             this.button1.Text = "создать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bDBankDataSet
@@ -201,6 +204,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -213,7 +217,7 @@
             this.Controls.Add(this.txtspas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtfio);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateKlient";
             this.Text = "СозданиеКлиента";
             this.Load += new System.EventHandler(this.CreateKlient_Load);

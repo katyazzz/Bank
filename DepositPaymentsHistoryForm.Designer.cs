@@ -36,17 +36,19 @@
             // dataGridViewDepositPaymentsHistory
             // 
             this.dataGridViewDepositPaymentsHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDepositPaymentsHistory.Location = new System.Drawing.Point(46, 158);
+            this.dataGridViewDepositPaymentsHistory.Location = new System.Drawing.Point(34, 128);
+            this.dataGridViewDepositPaymentsHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDepositPaymentsHistory.Name = "dataGridViewDepositPaymentsHistory";
             this.dataGridViewDepositPaymentsHistory.RowTemplate.Height = 24;
-            this.dataGridViewDepositPaymentsHistory.Size = new System.Drawing.Size(692, 214);
+            this.dataGridViewDepositPaymentsHistory.Size = new System.Drawing.Size(519, 174);
             this.dataGridViewDepositPaymentsHistory.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(41, 37);
+            this.label1.Location = new System.Drawing.Point(31, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 25);
             this.label1.TabIndex = 1;
@@ -54,11 +56,13 @@
             // 
             // DepositPaymentsHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewDepositPaymentsHistory);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DepositPaymentsHistoryForm";
             this.Text = "История выплат";
             this.Load += new System.EventHandler(this.DepositPaymentsHistoryForm_Load);

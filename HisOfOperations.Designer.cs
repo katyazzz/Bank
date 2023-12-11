@@ -36,17 +36,19 @@
             // dataGridHistory
             // 
             this.dataGridHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridHistory.Location = new System.Drawing.Point(52, 157);
+            this.dataGridHistory.Location = new System.Drawing.Point(39, 128);
+            this.dataGridHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridHistory.Name = "dataGridHistory";
             this.dataGridHistory.RowTemplate.Height = 24;
-            this.dataGridHistory.Size = new System.Drawing.Size(675, 243);
+            this.dataGridHistory.Size = new System.Drawing.Size(506, 197);
             this.dataGridHistory.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(47, 22);
+            this.label1.Location = new System.Drawing.Point(35, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 25);
             this.label1.TabIndex = 1;
@@ -54,11 +56,13 @@
             // 
             // HisOfOperations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridHistory);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HisOfOperations";
             this.Text = "История Операций";
             this.Load += new System.EventHandler(this.HisOfOperations_Load);

@@ -39,7 +39,7 @@
             // 
             this.txtDepositCode.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtDepositCode.Location = new System.Drawing.Point(52, 69);
-            this.txtDepositCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDepositCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtDepositCode.Name = "txtDepositCode";
             this.txtDepositCode.Size = new System.Drawing.Size(142, 23);
             this.txtDepositCode.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.txtSumma.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtSumma.Location = new System.Drawing.Point(52, 125);
-            this.txtSumma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSumma.Margin = new System.Windows.Forms.Padding(2);
             this.txtSumma.Name = "txtSumma";
             this.txtSumma.Size = new System.Drawing.Size(142, 23);
             this.txtSumma.TabIndex = 1;
@@ -77,27 +77,30 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(52, 170);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 29);
             this.button1.TabIndex = 4;
             this.button1.Text = "Подтвердить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OpenDepositForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(338, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSumma);
             this.Controls.Add(this.txtDepositCode);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OpenDepositForm";
             this.Text = "OpenDepositForm";
             this.Load += new System.EventHandler(this.OpenDepositForm_Load);
