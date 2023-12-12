@@ -48,10 +48,11 @@
             // buttonKlient
             // 
             this.buttonKlient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.buttonKlient.FlatAppearance.BorderSize = 0;
             this.buttonKlient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKlient.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonKlient.Location = new System.Drawing.Point(163, 156);
-            this.buttonKlient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonKlient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKlient.Name = "buttonKlient";
             this.buttonKlient.Size = new System.Drawing.Size(170, 33);
             this.buttonKlient.TabIndex = 1;
@@ -62,10 +63,11 @@
             // buttonSotr
             // 
             this.buttonSotr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.buttonSotr.FlatAppearance.BorderSize = 0;
             this.buttonSotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSotr.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSotr.Location = new System.Drawing.Point(163, 202);
-            this.buttonSotr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSotr.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSotr.Name = "buttonSotr";
             this.buttonSotr.Size = new System.Drawing.Size(170, 33);
             this.buttonSotr.TabIndex = 2;
@@ -95,7 +97,7 @@
             this.Controls.Add(this.buttonSotr);
             this.Controls.Add(this.buttonKlient);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Start";
             this.Text = "Start";
             this.ResumeLayout(false);
