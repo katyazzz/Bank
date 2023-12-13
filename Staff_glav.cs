@@ -228,6 +228,43 @@ namespace Bank
             {
                 MessageBox.Show("Выберите счет для заморозки.");
             }
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void FreezeAccount(int accountNumber)
@@ -346,6 +383,43 @@ namespace Bank
                 }
             }
             // В противном случае (если result == DialogResult.No), ничего не делаем
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -439,7 +513,44 @@ namespace Bank
             openDepositForm.SetPassportData(pasSeries, pasNumber);
 
             // Отображаем форму
-            openDepositForm.Show(); 
+            openDepositForm.Show();
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void new_credit_Click(object sender, EventArgs e)
@@ -456,6 +567,43 @@ namespace Bank
 
             // Отображаем форму
             openCreditForm.Show();
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -473,6 +621,44 @@ namespace Bank
             {
                 MessageBox.Show("Выберите счет для разморозки.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void UnfreezeAccount(int accountNumber)
@@ -639,6 +825,44 @@ namespace Bank
             {
                 MessageBox.Show("Выберите счет для закрытия в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void ChangePasswordButton_Click(object sender, EventArgs e)
