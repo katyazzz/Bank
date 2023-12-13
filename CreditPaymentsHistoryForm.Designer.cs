@@ -40,7 +40,7 @@
             this.dataGridViewCreditPaymentsHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCreditPaymentsHistory.Name = "dataGridViewCreditPaymentsHistory";
             this.dataGridViewCreditPaymentsHistory.RowTemplate.Height = 24;
-            this.dataGridViewCreditPaymentsHistory.Size = new System.Drawing.Size(543, 205);
+            this.dataGridViewCreditPaymentsHistory.Size = new System.Drawing.Size(648, 205);
             this.dataGridViewCreditPaymentsHistory.TabIndex = 0;
             this.dataGridViewCreditPaymentsHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreditPaymentsHistory_CellContentClick);
             // 
@@ -59,7 +59,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(760, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewCreditPaymentsHistory);
             this.Margin = new System.Windows.Forms.Padding(2);

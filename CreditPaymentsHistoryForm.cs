@@ -37,7 +37,7 @@ namespace Bank
                         adapter.Fill(dataTable);
 
                         // Отображение только нужных столбцов
-                        dataGridViewCreditPaymentsHistory.DataSource = dataTable.DefaultView.ToTable(false, "Номер счета", "Дата", "Сумма платежа", "Остаток по кредиту");
+                        dataGridViewCreditPaymentsHistory.DataSource = dataTable.DefaultView.ToTable(false, "Номер Операции", "Номер Кредита", "Дата", "Сумма платежа", "Остаток по кредиту");
                     }
                 }
             }

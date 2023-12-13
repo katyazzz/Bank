@@ -37,10 +37,10 @@
             // 
             this.dataGridViewDepositPaymentsHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDepositPaymentsHistory.Location = new System.Drawing.Point(34, 128);
-            this.dataGridViewDepositPaymentsHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDepositPaymentsHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDepositPaymentsHistory.Name = "dataGridViewDepositPaymentsHistory";
             this.dataGridViewDepositPaymentsHistory.RowTemplate.Height = 24;
-            this.dataGridViewDepositPaymentsHistory.Size = new System.Drawing.Size(519, 174);
+            this.dataGridViewDepositPaymentsHistory.Size = new System.Drawing.Size(608, 174);
             this.dataGridViewDepositPaymentsHistory.TabIndex = 0;
             // 
             // label1
@@ -59,10 +59,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(685, 366);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewDepositPaymentsHistory);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DepositPaymentsHistoryForm";
             this.Text = "История выплат";
             this.Load += new System.EventHandler(this.DepositPaymentsHistoryForm_Load);

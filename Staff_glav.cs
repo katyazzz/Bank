@@ -239,7 +239,6 @@ namespace Bank
         private void button12_Click(object sender, EventArgs e)
 
         {
-
           
             if (int.TryParse(txtspas.Text, out int pasSeries) && int.TryParse(txtnpas.Text, out int pasNumber))
             {

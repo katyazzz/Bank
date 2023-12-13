@@ -36,8 +36,7 @@ namespace Bank
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
-                        // Отображение только нужных столбцов
-                        dataGridViewDepositPaymentsHistory.DataSource = dataTable.DefaultView.ToTable(false, "Номер Операции", "Дата", "Сумма", "Остаток");
+                        dataGridViewDepositPaymentsHistory.DataSource = dataTable.DefaultView.ToTable(false, "Номер Операции", "Номер Вклада", "Дата", "Сумма", "Остаток");
                     }
                 }
             }
