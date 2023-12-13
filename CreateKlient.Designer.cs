@@ -136,6 +136,9 @@
             // 
             this.txtsex.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtsex.FormattingEnabled = true;
+            this.txtsex.Items.AddRange(new object[] {
+            "м",
+            "ж"});
             this.txtsex.Location = new System.Drawing.Point(47, 192);
             this.txtsex.Margin = new System.Windows.Forms.Padding(2);
             this.txtsex.Name = "txtsex";

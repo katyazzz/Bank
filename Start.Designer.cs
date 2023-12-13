@@ -32,13 +32,15 @@
             this.buttonKlient = new System.Windows.Forms.Button();
             this.buttonSotr = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(158, 65);
+            this.label1.Location = new System.Drawing.Point(116, 248);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 29);
@@ -51,7 +53,7 @@
             this.buttonKlient.FlatAppearance.BorderSize = 0;
             this.buttonKlient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKlient.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonKlient.Location = new System.Drawing.Point(163, 156);
+            this.buttonKlient.Location = new System.Drawing.Point(150, 330);
             this.buttonKlient.Margin = new System.Windows.Forms.Padding(2);
             this.buttonKlient.Name = "buttonKlient";
             this.buttonKlient.Size = new System.Drawing.Size(170, 33);
@@ -66,7 +68,7 @@
             this.buttonSotr.FlatAppearance.BorderSize = 0;
             this.buttonSotr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSotr.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSotr.Location = new System.Drawing.Point(163, 202);
+            this.buttonSotr.Location = new System.Drawing.Point(150, 378);
             this.buttonSotr.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSotr.Name = "buttonSotr";
             this.buttonSotr.Size = new System.Drawing.Size(170, 33);
@@ -79,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(159, 111);
+            this.label2.Location = new System.Drawing.Point(170, 293);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 23);
@@ -87,12 +89,22 @@
             this.label2.Text = "Войти как:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Bank.Properties.Resources.logo_bank;
+            this.pictureBox1.Location = new System.Drawing.Point(121, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(247, 215);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(551, 366);
+            this.ClientSize = new System.Drawing.Size(458, 486);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonSotr);
             this.Controls.Add(this.buttonKlient);
@@ -100,6 +112,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Start";
             this.Text = "Start";
+            this.Load += new System.EventHandler(this.Start_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +125,6 @@
         private System.Windows.Forms.Button buttonKlient;
         private System.Windows.Forms.Button buttonSotr;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

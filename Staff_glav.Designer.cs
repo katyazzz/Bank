@@ -66,15 +66,18 @@
             this.ChangePasswordButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtspas
             // 
             this.txtspas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtspas.Location = new System.Drawing.Point(23, 39);
+            this.txtspas.Location = new System.Drawing.Point(11, 39);
             this.txtspas.Margin = new System.Windows.Forms.Padding(2);
             this.txtspas.Name = "txtspas";
             this.txtspas.Size = new System.Drawing.Size(116, 24);
@@ -86,7 +89,7 @@
             this.label1.BackColor = System.Drawing.Color.FloralWhite;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Location = new System.Drawing.Point(9, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 17);
@@ -102,7 +105,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(539, 20);
+            this.button1.Location = new System.Drawing.Point(622, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 34);
@@ -119,7 +122,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(352, 20);
+            this.button2.Location = new System.Drawing.Point(435, 24);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 35);
@@ -131,7 +134,7 @@
             // txtnpas
             // 
             this.txtnpas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtnpas.Location = new System.Drawing.Point(179, 39);
+            this.txtnpas.Location = new System.Drawing.Point(167, 39);
             this.txtnpas.Margin = new System.Windows.Forms.Padding(2);
             this.txtnpas.Name = "txtnpas";
             this.txtnpas.Size = new System.Drawing.Size(116, 24);
@@ -143,7 +146,7 @@
             this.label2.BackColor = System.Drawing.Color.FloralWhite;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(176, 20);
+            this.label2.Location = new System.Drawing.Point(164, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 17);
@@ -428,7 +431,7 @@
             this.CreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateStaff.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateStaff.ForeColor = System.Drawing.Color.Transparent;
-            this.CreateStaff.Location = new System.Drawing.Point(701, 20);
+            this.CreateStaff.Location = new System.Drawing.Point(784, 24);
             this.CreateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.CreateStaff.Name = "CreateStaff";
             this.CreateStaff.Size = new System.Drawing.Size(170, 34);
@@ -452,6 +455,7 @@
             this.textBoxFIO.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFIO.Location = new System.Drawing.Point(87, 112);
             this.textBoxFIO.Name = "textBoxFIO";
+            this.textBoxFIO.ReadOnly = true;
             this.textBoxFIO.Size = new System.Drawing.Size(285, 23);
             this.textBoxFIO.TabIndex = 25;
             this.textBoxFIO.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -462,7 +466,7 @@
             this.label7.BackColor = System.Drawing.Color.FloralWhite;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(902, 15);
+            this.label7.Location = new System.Drawing.Point(994, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 17);
             this.label7.TabIndex = 26;
@@ -472,8 +476,9 @@
             // sotr_tb
             // 
             this.sotr_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sotr_tb.Location = new System.Drawing.Point(1002, 11);
+            this.sotr_tb.Location = new System.Drawing.Point(1094, 9);
             this.sotr_tb.Name = "sotr_tb";
+            this.sotr_tb.ReadOnly = true;
             this.sotr_tb.Size = new System.Drawing.Size(215, 26);
             this.sotr_tb.TabIndex = 27;
             this.sotr_tb.TextChanged += new System.EventHandler(this.sotr_tb_TextChanged);
@@ -481,8 +486,9 @@
             // post_tb
             // 
             this.post_tb.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.post_tb.Location = new System.Drawing.Point(1002, 39);
+            this.post_tb.Location = new System.Drawing.Point(1094, 37);
             this.post_tb.Name = "post_tb";
+            this.post_tb.ReadOnly = true;
             this.post_tb.Size = new System.Drawing.Size(215, 26);
             this.post_tb.TabIndex = 28;
             // 
@@ -527,7 +533,7 @@
             this.ChangePasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ChangePasswordButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChangePasswordButton.ForeColor = System.Drawing.Color.Black;
-            this.ChangePasswordButton.Location = new System.Drawing.Point(1002, 72);
+            this.ChangePasswordButton.Location = new System.Drawing.Point(1094, 70);
             this.ChangePasswordButton.Name = "ChangePasswordButton";
             this.ChangePasswordButton.Size = new System.Drawing.Size(134, 23);
             this.ChangePasswordButton.TabIndex = 31;
@@ -543,7 +549,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ExitButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(1142, 72);
+            this.ExitButton.Location = new System.Drawing.Point(1234, 70);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 32;
@@ -557,18 +563,42 @@
             this.label8.BackColor = System.Drawing.Color.FloralWhite;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(902, 43);
+            this.label8.Location = new System.Drawing.Point(994, 41);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 17);
             this.label8.TabIndex = 33;
             this.label8.Text = "Должность";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtnpas);
+            this.groupBox1.Controls.Add(this.txtspas);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(23, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(339, 81);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Данные Клиента";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(1075, 333);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 23);
+            this.label9.TabIndex = 6;
             // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1231, 620);
+            this.ClientSize = new System.Drawing.Size(1334, 620);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ChangePasswordButton);
@@ -596,12 +626,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridPA);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtnpas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtspas);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Staff_glav";
@@ -610,6 +636,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,5 +682,7 @@
         private System.Windows.Forms.Button ChangePasswordButton;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
     }
 }
