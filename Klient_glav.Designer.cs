@@ -195,9 +195,9 @@ namespace Bank
             this.btnhistoryDeposit.Location = new System.Drawing.Point(627, 321);
             this.btnhistoryDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.btnhistoryDeposit.Name = "btnhistoryDeposit";
-            this.btnhistoryDeposit.Size = new System.Drawing.Size(225, 42);
+            this.btnhistoryDeposit.Size = new System.Drawing.Size(254, 42);
             this.btnhistoryDeposit.TabIndex = 12;
-            this.btnhistoryDeposit.Text = "История операций";
+            this.btnhistoryDeposit.Text = "История операций по вкладам";
             this.btnhistoryDeposit.UseVisualStyleBackColor = false;
             this.btnhistoryDeposit.Click += new System.EventHandler(this.btnhistoryDeposit_Click);
             // 
@@ -212,9 +212,9 @@ namespace Bank
             this.btnhistoryCredit.Location = new System.Drawing.Point(627, 490);
             this.btnhistoryCredit.Margin = new System.Windows.Forms.Padding(2);
             this.btnhistoryCredit.Name = "btnhistoryCredit";
-            this.btnhistoryCredit.Size = new System.Drawing.Size(225, 42);
+            this.btnhistoryCredit.Size = new System.Drawing.Size(254, 42);
             this.btnhistoryCredit.TabIndex = 13;
-            this.btnhistoryCredit.Text = "История операций";
+            this.btnhistoryCredit.Text = "История операций по кредитам";
             this.btnhistoryCredit.UseVisualStyleBackColor = false;
             this.btnhistoryCredit.Click += new System.EventHandler(this.btnhistoryCredit_Click);
             // 
