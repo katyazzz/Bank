@@ -107,7 +107,6 @@ namespace Bank
 
                 using (SqlCommand command = new SqlCommand(queryString, connection))
                 {
-                    // Замените 'ВашаСерия' и 'ВашНомер' на конкретные значения
                     command.Parameters.AddWithValue("@PasSeries", txtspas.Text);
                     command.Parameters.AddWithValue("@PasNumber", txtnpas.Text);
 
@@ -115,12 +114,10 @@ namespace Bank
                     {
                         if (reader.Read())
                         {
-                            // Если есть результат, установить значение в TextBox
                             textBoxFIO.Text = reader["FIO"].ToString();
                         }
                         else
                         {
-                            // Если нет результатов, очистить TextBox
                             textBoxFIO.Text = string.Empty;
                         }
                     }
@@ -176,6 +173,43 @@ namespace Bank
             {
                 MessageBox.Show("Выберите счет для списания баланса.");
             }
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -340,6 +374,42 @@ namespace Bank
                 MessageBox.Show("Выберите счет для пополнения баланса.");
             }
 
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void sotr_tb_TextChanged(object sender, EventArgs e)
@@ -476,6 +546,43 @@ namespace Bank
             {
                 MessageBox.Show("Выберите счет отправителя в дата-гриде.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            // присвоить значения входным параметрам функции
+            ShowPerAc.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowPerAc.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            // открыть соединение с БД
+            Connection.Open();
+            // создать временную таблицу temp
+            var temp = new DataTable();
+            // выполнить табличную функцию и вернуть таблицу в объект Reader
+            // заполнить таблицу temp данными из Reader
+            temp.Load(ShowPerAc.ExecuteReader());
+            dataGridPA.DataSource = temp;
+            Connection.Close();
+
+            ShowVklad.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowVklad.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp1 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp1.Load(ShowVklad.ExecuteReader());
+            dataGridDep.DataSource = temp1;
+            // закрыть соединение с БД
+            Connection.Close();
+
+
+            ShowCredit.Parameters["@PasSeries"].Value = Convert.ToInt32(txtspas.Text);
+            ShowCredit.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
+
+            Connection.Open();
+            var temp2 = new DataTable();
+            //устанавить связь с объектом типа dataGridView
+            temp2.Load(ShowCredit.ExecuteReader());
+            dataGridCredit.DataSource = temp2;
+            // закрыть соединение с БД
+            Connection.Close();
         }
 
         private void closebtn_Click(object sender, EventArgs e)
