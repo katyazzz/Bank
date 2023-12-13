@@ -39,29 +39,39 @@ namespace Bank
         private void btnDebFromAccount_Click_1(object sender, EventArgs e)
         {
 
-            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
 
-            int staffID = staffInfo.Item1;
-
-            if (float.TryParse(txtAmountDeb.Text, out float amount))
+            try
             {
-                // Получаем текущий баланс счета
-                float currentBalance = db.GetAccountBalance(accountNumber);
+                (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+                int staffID = staffInfo.Item1;
 
-                if (currentBalance >= amount)
+                if (float.TryParse(txtAmountDeb.Text, out float amount))
                 {
-                    // Выполняем списание средств
-                    db.WithdrawMoney( accountNumber, amount, ID_Staff);
-                    this.Close();
+                    // Получаем текущий баланс счета
+                    float currentBalance = db.GetAccountBalance(accountNumber);
+
+                    if (currentBalance >= amount)
+                    {
+                        // Выполняем списание средств
+                        db.WithdrawMoney(accountNumber, amount, ID_Staff);
+                        this.Close();
+                    }
+                    else
+                    {
+                        // Выводим предупреждение в виде всплывающего окна
+                        MessageBox.Show("На счете недостаточно средств для выполнения списания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("На счете недостаточно средств для выполнения списания.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Выводим предупреждение в виде всплывающего окна
+                    MessageBox.Show("Пожалуйста, введите корректную сумму.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Пожалуйста, введите корректную сумму.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Выводим предупреждение в виде всплывающего окна
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
