@@ -68,6 +68,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.typeDep = new System.Windows.Forms.Button();
+            this.typeKre = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
@@ -282,7 +284,7 @@
             this.button6.Location = new System.Drawing.Point(845, 189);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 27);
+            this.button6.Size = new System.Drawing.Size(127, 27);
             this.button6.TabIndex = 16;
             this.button6.Text = "пополнение";
             this.button6.UseVisualStyleBackColor = false;
@@ -299,7 +301,7 @@
             this.button7.Location = new System.Drawing.Point(845, 220);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(109, 27);
+            this.button7.Size = new System.Drawing.Size(127, 27);
             this.button7.TabIndex = 17;
             this.button7.Text = "снятие";
             this.button7.UseVisualStyleBackColor = false;
@@ -316,7 +318,7 @@
             this.TransferMoneybtn.Location = new System.Drawing.Point(845, 251);
             this.TransferMoneybtn.Margin = new System.Windows.Forms.Padding(2);
             this.TransferMoneybtn.Name = "TransferMoneybtn";
-            this.TransferMoneybtn.Size = new System.Drawing.Size(109, 27);
+            this.TransferMoneybtn.Size = new System.Drawing.Size(127, 27);
             this.TransferMoneybtn.TabIndex = 18;
             this.TransferMoneybtn.Text = "перевод";
             this.TransferMoneybtn.UseVisualStyleBackColor = false;
@@ -354,7 +356,7 @@
             this.frozebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.frozebtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frozebtn.ForeColor = System.Drawing.Color.White;
-            this.frozebtn.Location = new System.Drawing.Point(970, 203);
+            this.frozebtn.Location = new System.Drawing.Point(997, 204);
             this.frozebtn.Margin = new System.Windows.Forms.Padding(2);
             this.frozebtn.Name = "frozebtn";
             this.frozebtn.Size = new System.Drawing.Size(174, 26);
@@ -516,7 +518,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(970, 233);
+            this.button5.Location = new System.Drawing.Point(997, 234);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(174, 26);
@@ -591,12 +593,48 @@
             this.label9.Size = new System.Drawing.Size(0, 23);
             this.label9.TabIndex = 6;
             // 
+            // typeDep
+            // 
+            this.typeDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.typeDep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.typeDep.FlatAppearance.BorderSize = 0;
+            this.typeDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typeDep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeDep.ForeColor = System.Drawing.Color.White;
+            this.typeDep.Location = new System.Drawing.Point(845, 323);
+            this.typeDep.Margin = new System.Windows.Forms.Padding(2);
+            this.typeDep.Name = "typeDep";
+            this.typeDep.Size = new System.Drawing.Size(127, 26);
+            this.typeDep.TabIndex = 35;
+            this.typeDep.Text = "виды вкладов";
+            this.typeDep.UseVisualStyleBackColor = false;
+            this.typeDep.Click += new System.EventHandler(this.typeDep_Click);
+            // 
+            // typeKre
+            // 
+            this.typeKre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.typeKre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.typeKre.FlatAppearance.BorderSize = 0;
+            this.typeKre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.typeKre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeKre.ForeColor = System.Drawing.Color.White;
+            this.typeKre.Location = new System.Drawing.Point(845, 476);
+            this.typeKre.Margin = new System.Windows.Forms.Padding(2);
+            this.typeKre.Name = "typeKre";
+            this.typeKre.Size = new System.Drawing.Size(127, 26);
+            this.typeKre.TabIndex = 36;
+            this.typeKre.Text = "виды кредитов";
+            this.typeKre.UseVisualStyleBackColor = false;
+            this.typeKre.Click += new System.EventHandler(this.typeKre_Click);
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1334, 620);
+            this.Controls.Add(this.typeKre);
+            this.Controls.Add(this.typeDep);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
@@ -684,5 +722,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button typeDep;
+        private System.Windows.Forms.Button typeKre;
     }
 }

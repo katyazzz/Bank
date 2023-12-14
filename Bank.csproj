@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BDBankDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDBankDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ChangeClientPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +202,18 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="TypeOfCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfCredits.Designer.cs">
+      <DependentUpon>TypeOfCredits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfDeposits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfDeposits.Designer.cs">
+      <DependentUpon>TypeOfDeposits.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountHistoryForm.resx">
       <DependentUpon>AccountHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +279,12 @@
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TypeOfCredits.resx">
+      <DependentUpon>TypeOfCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeOfDeposits.resx">
+      <DependentUpon>TypeOfDeposits.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="BDBankDataSet.xsc">
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
     </None>
@@ -272,6 +295,17 @@
     </None>
     <None Include="BDBankDataSet.xss">
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BDBankDataSet1.xsc">
+      <DependentUpon>BDBankDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BDBankDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDBankDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDBankDataSet1.xss">
+      <DependentUpon>BDBankDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

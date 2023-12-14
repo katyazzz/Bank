@@ -896,5 +896,23 @@ namespace Bank
             // Отображение новой формы
             loginForm.Show();
         }
+
+        private void typeDep_Click(object sender, EventArgs e)
+        {
+            // Создание экземпляра формы TypeOfDeposits
+            TypeOfDeposits typeOfDepositsForm = new TypeOfDeposits();
+
+            // Показ формы
+            typeOfDepositsForm.Show();
+        }
+
+        private void typeKre_Click(object sender, EventArgs e)
+        {
+            // Создание экземпляра формы TypeOfDeposits
+            TypeOfCredits typeOfCreditsForm = new TypeOfCredits();
+
+            // Показ формы
+            typeOfCreditsForm.Show();
+        }
     }
 }
