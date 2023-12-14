@@ -34,6 +34,8 @@ namespace Bank
             // Отображаем информацию на форме
             sotr_tb.Text = staffInfo.Item2; // FIO
             post_tb.Text = staffInfo.Item3; // Post
+                                            
+            LoadStaffContactInfo(ID_Staff);
         }
 
      
@@ -103,7 +105,7 @@ namespace Bank
             {
                 connection.Open();
 
-                string queryString = "SELECT FIO FROM Klient WHERE PasSeries = @PasSeries AND PasNumber = @PasNumber";
+                string queryString = "SELECT FIO, Phone, mail FROM Klient WHERE PasSeries = @PasSeries AND PasNumber = @PasNumber";
 
                 using (SqlCommand command = new SqlCommand(queryString, connection))
                 {
@@ -115,10 +117,14 @@ namespace Bank
                         if (reader.Read())
                         {
                             textBoxFIO.Text = reader["FIO"].ToString();
+                            txtboxPhone.Text = reader["Phone"].ToString();
+                            txtBoxMail.Text = reader["mail"].ToString();
                         }
                         else
                         {
                             textBoxFIO.Text = string.Empty;
+                            txtboxPhone.Text = string.Empty;
+                            txtBoxMail.Text = string.Empty;
                         }
                     }
                 }
@@ -911,6 +917,120 @@ namespace Bank
 
             // Показ формы
             typeOfCreditsForm.Show();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void UpdateClientInfo(string pasSeries, string pasNumber, string newPhone, string newMail)
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string updateQuery = "UPDATE Klient SET Phone = @NewPhone, mail = @NewMail WHERE PasSeries = @PasSeries AND PasNumber = @PasNumber";
+
+                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                {
+                    updateCommand.Parameters.AddWithValue("@NewPhone", newPhone);
+                    updateCommand.Parameters.AddWithValue("@NewMail", newMail);
+                    updateCommand.Parameters.AddWithValue("@PasSeries", pasSeries);
+                    updateCommand.Parameters.AddWithValue("@PasNumber", pasNumber);
+
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Данные успешно обновлены.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Обновление данных не удалось.");
+                    }
+                }
+            }
+        }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string pasSeries = txtspas.Text;
+            string pasNumber = txtnpas.Text;
+            string newPhone = txtboxPhone.Text;
+            string newMail = txtBoxMail.Text;
+
+            UpdateClientInfo(pasSeries, pasNumber, newPhone, newMail);
+        }
+        private void UpdateStaffInfo(int staffID, string newPhone, string newMail)
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string updateQuery = "UPDATE Staff SET Phone = @NewPhone, mail = @NewMail WHERE ID_Staff = @StaffID";
+
+                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                {
+                    updateCommand.Parameters.AddWithValue("@NewPhone", newPhone);
+                    updateCommand.Parameters.AddWithValue("@NewMail", newMail);
+                    updateCommand.Parameters.AddWithValue("@StaffID", staffID);
+
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Данные успешно обновлены.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Обновление данных не удалось.");
+                    }
+                }
+            }
+        }
+
+        private void btnSaveStaffInfo_Click(object sender, EventArgs e)
+        {
+            // Получаем информацию о сотруднике
+            (int, string, string) staffInfo = db.GetStaffInfoByID(ID_Staff);
+
+            string newPhone = txtStaffPhone.Text;
+            string newMail = txtStaffMail.Text;
+
+            // Вызываем метод для обновления данных сотрудника
+            UpdateStaffInfo(ID_Staff, newPhone, newMail);
+        }
+        private void LoadStaffContactInfo(int staffID)
+        {
+            string connectionString = "Data Source=DESKTOP-JGVCKUM\\SQLEXPRESS;Initial Catalog=BDBank;Integrated Security=True;Pooling=False";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT Phone, mail FROM Staff WHERE ID_Staff = @StaffID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@StaffID", staffID);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string phone = reader["Phone"].ToString();
+                            string mail = reader["mail"].ToString();
+
+                            // Задаем значения в текстовые поля
+                            txtStaffPhone.Text = phone;
+                            txtStaffMail.Text = mail;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -70,10 +70,22 @@
             this.label9 = new System.Windows.Forms.Label();
             this.typeDep = new System.Windows.Forms.Button();
             this.typeKre = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtboxPhone = new System.Windows.Forms.TextBox();
+            this.txtBoxMail = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtStaffMail = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtStaffPhone = new System.Windows.Forms.TextBox();
+            this.btnSaveStaffInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtspas
@@ -107,7 +119,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(622, 24);
+            this.button1.Location = new System.Drawing.Point(567, 24);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 34);
@@ -124,7 +136,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(435, 24);
+            this.button2.Location = new System.Drawing.Point(380, 24);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 35);
@@ -281,7 +293,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(845, 189);
+            this.button6.Location = new System.Drawing.Point(827, 193);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(127, 27);
@@ -298,7 +310,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(845, 220);
+            this.button7.Location = new System.Drawing.Point(827, 224);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 27);
@@ -315,7 +327,7 @@
             this.TransferMoneybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferMoneybtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TransferMoneybtn.ForeColor = System.Drawing.Color.White;
-            this.TransferMoneybtn.Location = new System.Drawing.Point(845, 251);
+            this.TransferMoneybtn.Location = new System.Drawing.Point(827, 255);
             this.TransferMoneybtn.Margin = new System.Windows.Forms.Padding(2);
             this.TransferMoneybtn.Name = "TransferMoneybtn";
             this.TransferMoneybtn.Size = new System.Drawing.Size(127, 27);
@@ -356,10 +368,10 @@
             this.frozebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.frozebtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frozebtn.ForeColor = System.Drawing.Color.White;
-            this.frozebtn.Location = new System.Drawing.Point(997, 204);
+            this.frozebtn.Location = new System.Drawing.Point(964, 209);
             this.frozebtn.Margin = new System.Windows.Forms.Padding(2);
             this.frozebtn.Name = "frozebtn";
-            this.frozebtn.Size = new System.Drawing.Size(174, 26);
+            this.frozebtn.Size = new System.Drawing.Size(157, 26);
             this.frozebtn.TabIndex = 19;
             this.frozebtn.Text = "заблокировать счет";
             this.frozebtn.UseVisualStyleBackColor = false;
@@ -433,7 +445,7 @@
             this.CreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateStaff.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CreateStaff.ForeColor = System.Drawing.Color.Transparent;
-            this.CreateStaff.Location = new System.Drawing.Point(784, 24);
+            this.CreateStaff.Location = new System.Drawing.Point(729, 24);
             this.CreateStaff.Margin = new System.Windows.Forms.Padding(2);
             this.CreateStaff.Name = "CreateStaff";
             this.CreateStaff.Size = new System.Drawing.Size(170, 34);
@@ -446,7 +458,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(21, 115);
+            this.label6.Location = new System.Drawing.Point(7, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 24;
@@ -455,10 +467,10 @@
             // textBoxFIO
             // 
             this.textBoxFIO.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxFIO.Location = new System.Drawing.Point(87, 112);
+            this.textBoxFIO.Location = new System.Drawing.Point(73, 20);
             this.textBoxFIO.Name = "textBoxFIO";
             this.textBoxFIO.ReadOnly = true;
-            this.textBoxFIO.Size = new System.Drawing.Size(285, 23);
+            this.textBoxFIO.Size = new System.Drawing.Size(295, 23);
             this.textBoxFIO.TabIndex = 25;
             this.textBoxFIO.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -518,10 +530,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(997, 234);
+            this.button5.Location = new System.Drawing.Point(964, 239);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(174, 26);
+            this.button5.Size = new System.Drawing.Size(157, 26);
             this.button5.TabIndex = 30;
             this.button5.Text = "разблокировать счет";
             this.button5.UseVisualStyleBackColor = false;
@@ -601,7 +613,7 @@
             this.typeDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.typeDep.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeDep.ForeColor = System.Drawing.Color.White;
-            this.typeDep.Location = new System.Drawing.Point(845, 323);
+            this.typeDep.Location = new System.Drawing.Point(543, 294);
             this.typeDep.Margin = new System.Windows.Forms.Padding(2);
             this.typeDep.Name = "typeDep";
             this.typeDep.Size = new System.Drawing.Size(127, 26);
@@ -618,7 +630,7 @@
             this.typeKre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.typeKre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeKre.ForeColor = System.Drawing.Color.White;
-            this.typeKre.Location = new System.Drawing.Point(845, 476);
+            this.typeKre.Location = new System.Drawing.Point(543, 437);
             this.typeKre.Margin = new System.Windows.Forms.Padding(2);
             this.typeKre.Name = "typeKre";
             this.typeKre.Size = new System.Drawing.Size(127, 26);
@@ -627,13 +639,138 @@
             this.typeKre.UseVisualStyleBackColor = false;
             this.typeKre.Click += new System.EventHandler(this.typeKre_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(374, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 16);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Телефон";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(653, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 16);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Почта";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // txtboxPhone
+            // 
+            this.txtboxPhone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtboxPhone.Location = new System.Drawing.Point(447, 20);
+            this.txtboxPhone.Name = "txtboxPhone";
+            this.txtboxPhone.Size = new System.Drawing.Size(200, 23);
+            this.txtboxPhone.TabIndex = 39;
+            // 
+            // txtBoxMail
+            // 
+            this.txtBoxMail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBoxMail.Location = new System.Drawing.Point(706, 20);
+            this.txtBoxMail.Name = "txtBoxMail";
+            this.txtBoxMail.Size = new System.Drawing.Size(182, 23);
+            this.txtBoxMail.TabIndex = 40;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtBoxMail);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtboxPhone);
+            this.groupBox2.Controls.Add(this.textBoxFIO);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(23, 99);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1010, 54);
+            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Персональные данные";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(906, 20);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(91, 23);
+            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.Text = "обновить";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(1054, 530);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Телефон";
+            // 
+            // txtStaffMail
+            // 
+            this.txtStaffMail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtStaffMail.Location = new System.Drawing.Point(1127, 556);
+            this.txtStaffMail.Name = "txtStaffMail";
+            this.txtStaffMail.Size = new System.Drawing.Size(182, 23);
+            this.txtStaffMail.TabIndex = 45;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(1074, 559);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 16);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Почта";
+            // 
+            // txtStaffPhone
+            // 
+            this.txtStaffPhone.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtStaffPhone.Location = new System.Drawing.Point(1127, 527);
+            this.txtStaffPhone.Name = "txtStaffPhone";
+            this.txtStaffPhone.Size = new System.Drawing.Size(182, 23);
+            this.txtStaffPhone.TabIndex = 44;
+            // 
+            // btnSaveStaffInfo
+            // 
+            this.btnSaveStaffInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.btnSaveStaffInfo.FlatAppearance.BorderSize = 0;
+            this.btnSaveStaffInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveStaffInfo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSaveStaffInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSaveStaffInfo.Location = new System.Drawing.Point(1218, 585);
+            this.btnSaveStaffInfo.Name = "btnSaveStaffInfo";
+            this.btnSaveStaffInfo.Size = new System.Drawing.Size(91, 23);
+            this.btnSaveStaffInfo.TabIndex = 46;
+            this.btnSaveStaffInfo.Text = "обновить";
+            this.btnSaveStaffInfo.UseVisualStyleBackColor = false;
+            this.btnSaveStaffInfo.Click += new System.EventHandler(this.btnSaveStaffInfo_Click);
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1334, 620);
+            this.ClientSize = new System.Drawing.Size(1340, 620);
+            this.Controls.Add(this.btnSaveStaffInfo);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.txtStaffMail);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.typeKre);
+            this.Controls.Add(this.txtStaffPhone);
             this.Controls.Add(this.typeDep);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox1);
@@ -645,8 +782,6 @@
             this.Controls.Add(this.post_tb);
             this.Controls.Add(this.sotr_tb);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxFIO);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.CreateStaff);
             this.Controls.Add(this.history_dep);
             this.Controls.Add(this.history_trans);
@@ -676,6 +811,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,5 +861,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button typeDep;
         private System.Windows.Forms.Button typeKre;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtboxPhone;
+        private System.Windows.Forms.TextBox txtBoxMail;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtStaffMail;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtStaffPhone;
+        private System.Windows.Forms.Button btnSaveStaffInfo;
     }
 }
