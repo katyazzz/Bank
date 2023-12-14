@@ -722,6 +722,7 @@
             this.txtStaffMail.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtStaffMail.Location = new System.Drawing.Point(1127, 556);
             this.txtStaffMail.Name = "txtStaffMail";
+            this.txtStaffMail.ReadOnly = true;
             this.txtStaffMail.Size = new System.Drawing.Size(182, 23);
             this.txtStaffMail.TabIndex = 45;
             // 
