@@ -340,10 +340,8 @@ namespace Bank
         {
             if (int.TryParse(txtspas.Text, out int pasSeries) && int.TryParse(txtnpas.Text, out int pasNumber))
             {
-                // Преобразование прошло успешно, теперь pasSeries и pasNumber содержат значения
-
-                // Создайте новую форму CreditPaymentsHistoryForm
-                CreditPaymentsHistoryForm creditPaymentsHistoryForm = new CreditPaymentsHistoryForm();
+                
+                CreditPaymentsHistoryForm creditPaymentsHistoryForm = new CreditPaymentsHistoryForm(pasSeries, pasNumber, db);
 
                 // Загрузите историю платежей по кредиту в новую форму
                 creditPaymentsHistoryForm.LoadCreditPaymentsHistory(pasSeries, pasNumber, db);
