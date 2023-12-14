@@ -109,9 +109,6 @@ namespace Bank
         {
             string filterExpression = $"[Номер Вклада] = '{textBoxDepositNumber.Text}'";
             bindingSource.Filter = filterExpression;
-
-            // Отладочное сообщение
-            MessageBox.Show($"Applied filter: {filterExpression}");
         }
 
     }
