@@ -81,6 +81,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtStaffPhone = new System.Windows.Forms.TextBox();
             this.btnSaveStaffInfo = new System.Windows.Forms.Button();
+            this.btnWithdraw = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCredit)).BeginInit();
@@ -239,6 +240,7 @@
             this.dataGridDep.RowTemplate.Height = 24;
             this.dataGridDep.Size = new System.Drawing.Size(787, 94);
             this.dataGridDep.TabIndex = 12;
+            this.dataGridDep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDep_CellContentClick);
             // 
             // dataGridCredit
             // 
@@ -759,12 +761,30 @@
             this.btnSaveStaffInfo.UseVisualStyleBackColor = false;
             this.btnSaveStaffInfo.Click += new System.EventHandler(this.btnSaveStaffInfo_Click);
             // 
+            // btnWithdraw
+            // 
+            this.btnWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
+            this.btnWithdraw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWithdraw.FlatAppearance.BorderSize = 0;
+            this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWithdraw.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnWithdraw.ForeColor = System.Drawing.Color.White;
+            this.btnWithdraw.Location = new System.Drawing.Point(827, 323);
+            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Size = new System.Drawing.Size(127, 43);
+            this.btnWithdraw.TabIndex = 47;
+            this.btnWithdraw.Text = "перевод накоплений";
+            this.btnWithdraw.UseVisualStyleBackColor = false;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
+            // 
             // Staff_glav
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1340, 620);
+            this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.btnSaveStaffInfo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox2);
@@ -873,5 +893,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtStaffPhone;
         private System.Windows.Forms.Button btnSaveStaffInfo;
+        private System.Windows.Forms.Button btnWithdraw;
     }
 }

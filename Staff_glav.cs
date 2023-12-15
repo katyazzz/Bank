@@ -1032,5 +1032,32 @@ namespace Bank
                 }
             }
         }
+
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            // Проверяем, есть ли выбранная строка
+            if (dataGridDep.SelectedRows.Count > 0)
+            {
+                // Получаем значения ID_Deposit и Summa из выбранной строки
+                int depositCode = Convert.ToInt32(dataGridDep.SelectedRows[0].Cells["ID_Deposit"].Value);
+                decimal summa = Convert.ToDecimal(dataGridDep.SelectedRows[0].Cells["Сумма"].Value);
+
+                // Создаем новую форму WithdrawForm
+                WithdrawForm withdrawForm = new WithdrawForm(depositCode, summa);
+
+                // Отображаем форму
+                withdrawForm.Show();
+            }
+            else
+            {
+                // Если ничего не выбрано, выводим сообщение или предпринимаем другие действия
+                MessageBox.Show("Выберите вклад для снятия средств.");
+            }
+        }
+
+        private void dataGridDep_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

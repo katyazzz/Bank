@@ -214,6 +214,12 @@
     <Compile Include="TypeOfDeposits.Designer.cs">
       <DependentUpon>TypeOfDeposits.cs</DependentUpon>
     </Compile>
+    <Compile Include="WithdrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawForm.Designer.cs">
+      <DependentUpon>WithdrawForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountHistoryForm.resx">
       <DependentUpon>AccountHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TypeOfDeposits.resx">
       <DependentUpon>TypeOfDeposits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawForm.resx">
+      <DependentUpon>WithdrawForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BDBankDataSet.xsc">
       <DependentUpon>BDBankDataSet.xsd</DependentUpon>
