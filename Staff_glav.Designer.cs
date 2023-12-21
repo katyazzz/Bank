@@ -765,6 +765,7 @@
             // 
             this.btnWithdraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(2)))));
             this.btnWithdraw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWithdraw.Enabled = false;
             this.btnWithdraw.FlatAppearance.BorderSize = 0;
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWithdraw.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

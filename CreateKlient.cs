@@ -42,6 +42,8 @@ namespace Bank
                     Klient_Creation.Parameters["@PasNumber"].Value = Convert.ToInt32(txtnpas.Text);
                     Klient_Creation.Parameters["@bd"].Value = txtbd.Value;
                     Klient_Creation.Parameters["@sex"].Value = txtsex.Text;
+                    Klient_Creation.Parameters["@Phone"].Value = txtphone.Text;
+                    Klient_Creation.Parameters["@mail"].Value = txtmail.Text;
 
                     // Открыть соединение с БД
                     Connect.Open();

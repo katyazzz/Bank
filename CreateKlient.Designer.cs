@@ -45,6 +45,10 @@
             this.depositPaymentTableAdapter = new Bank.BDBankDataSetTableAdapters.DepositPaymentTableAdapter();
             this.Connect = new System.Data.SqlClient.SqlConnection();
             this.Klient_Creation = new System.Data.SqlClient.SqlCommand();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtmail = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtphone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bDBankDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depositPaymentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -139,7 +143,7 @@
             this.txtsex.Items.AddRange(new object[] {
             "м",
             "ж"});
-            this.txtsex.Location = new System.Drawing.Point(47, 192);
+            this.txtsex.Location = new System.Drawing.Point(243, 139);
             this.txtsex.Margin = new System.Windows.Forms.Padding(2);
             this.txtsex.Name = "txtsex";
             this.txtsex.Size = new System.Drawing.Size(92, 25);
@@ -149,7 +153,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(44, 173);
+            this.label5.Location = new System.Drawing.Point(240, 120);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 17);
@@ -201,14 +205,60 @@
             new System.Data.SqlClient.SqlParameter("@PasNumber", System.Data.SqlDbType.Int, 6),
             new System.Data.SqlClient.SqlParameter("@FIO", System.Data.SqlDbType.VarChar, 100),
             new System.Data.SqlClient.SqlParameter("@bd", System.Data.SqlDbType.DateTime),
-            new System.Data.SqlClient.SqlParameter("@sex", System.Data.SqlDbType.Char, 1)});
+            new System.Data.SqlClient.SqlParameter("@sex", System.Data.SqlDbType.Char, 1),
+            new System.Data.SqlClient.SqlParameter("@Phone", System.Data.SqlDbType.Char),
+            new System.Data.SqlClient.SqlParameter("@mail", System.Data.SqlDbType.VarChar)});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(238, 173);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 17);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Почта";
+            // 
+            // txtmail
+            // 
+            this.txtmail.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtmail.Location = new System.Drawing.Point(241, 192);
+            this.txtmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmail.Name = "txtmail";
+            this.txtmail.Size = new System.Drawing.Size(174, 24);
+            this.txtmail.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(44, 173);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 17);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Номер телефона";
+            // 
+            // txtphone
+            // 
+            this.txtphone.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtphone.Location = new System.Drawing.Point(47, 192);
+            this.txtphone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(174, 24);
+            this.txtphone.TabIndex = 28;
             // 
             // CreateKlient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 311);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtmail);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtphone);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtsex);
@@ -249,5 +299,9 @@
         private BDBankDataSetTableAdapters.DepositPaymentTableAdapter depositPaymentTableAdapter;
         private System.Data.SqlClient.SqlConnection Connect;
         private System.Data.SqlClient.SqlCommand Klient_Creation;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtmail;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtphone;
     }
 }

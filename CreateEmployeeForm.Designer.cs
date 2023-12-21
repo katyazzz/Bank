@@ -43,6 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Staff_Creation = new System.Data.SqlClient.SqlCommand();
             this.Connection = new System.Data.SqlClient.SqlConnection();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtphone = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -51,7 +55,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(33, 308);
+            this.button1.Location = new System.Drawing.Point(35, 307);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 28);
@@ -64,12 +68,13 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(30, 192);
+            this.label5.Location = new System.Drawing.Point(226, 143);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 17);
             this.label5.TabIndex = 20;
             this.label5.Text = "Пол";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtsex
             // 
@@ -78,11 +83,15 @@
             "ж"});
             this.txtsex.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtsex.FormattingEnabled = true;
-            this.txtsex.Location = new System.Drawing.Point(33, 211);
+            this.txtsex.Items.AddRange(new object[] {
+            "м",
+            "ж"});
+            this.txtsex.Location = new System.Drawing.Point(229, 162);
             this.txtsex.Margin = new System.Windows.Forms.Padding(2);
             this.txtsex.Name = "txtsex";
             this.txtsex.Size = new System.Drawing.Size(92, 25);
             this.txtsex.TabIndex = 19;
+            this.txtsex.SelectedIndexChanged += new System.EventHandler(this.txtsex_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -167,7 +176,7 @@
             // txtpost
             // 
             this.txtpost.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtpost.Location = new System.Drawing.Point(33, 263);
+            this.txtpost.Location = new System.Drawing.Point(34, 211);
             this.txtpost.Margin = new System.Windows.Forms.Padding(2);
             this.txtpost.Name = "txtpost";
             this.txtpost.Size = new System.Drawing.Size(174, 24);
@@ -177,7 +186,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(30, 244);
+            this.label6.Location = new System.Drawing.Point(31, 192);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 17);
@@ -196,7 +205,9 @@
             new System.Data.SqlClient.SqlParameter("@FIO", System.Data.SqlDbType.VarChar, 50),
             new System.Data.SqlClient.SqlParameter("@BirthDay", System.Data.SqlDbType.Date),
             new System.Data.SqlClient.SqlParameter("@Sex", System.Data.SqlDbType.Char, 1),
-            new System.Data.SqlClient.SqlParameter("@Post", System.Data.SqlDbType.VarChar)});
+            new System.Data.SqlClient.SqlParameter("@Post", System.Data.SqlDbType.VarChar),
+            new System.Data.SqlClient.SqlParameter("@PhoneNumber", System.Data.SqlDbType.Char),
+            new System.Data.SqlClient.SqlParameter("@mail", System.Data.SqlDbType.VarChar)});
             // 
             // Connection
             // 
@@ -204,12 +215,56 @@
     "=True";
             this.Connection.FireInfoMessageEventOnUserErrors = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(32, 242);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(128, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Номер телефона";
+            // 
+            // txtphone
+            // 
+            this.txtphone.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtphone.Location = new System.Drawing.Point(35, 261);
+            this.txtphone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(174, 24);
+            this.txtphone.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(226, 242);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 17);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Почта";
+            // 
+            // txtmail
+            // 
+            this.txtmail.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtmail.Location = new System.Drawing.Point(229, 261);
+            this.txtmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtmail.Name = "txtmail";
+            this.txtmail.Size = new System.Drawing.Size(174, 24);
+            this.txtmail.TabIndex = 26;
+            // 
             // CreateEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(521, 450);
+            this.ClientSize = new System.Drawing.Size(521, 389);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtmail);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtphone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtpost);
             this.Controls.Add(this.button1);
@@ -225,6 +280,7 @@
             this.Controls.Add(this.txtfio);
             this.Name = "CreateEmployeeForm";
             this.Text = "CreateEmployeeForm";
+            this.Load += new System.EventHandler(this.CreateEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +303,9 @@
         private System.Windows.Forms.Label label6;
         private System.Data.SqlClient.SqlCommand Staff_Creation;
         private System.Data.SqlClient.SqlConnection Connection;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtphone;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtmail;
     }
 }
